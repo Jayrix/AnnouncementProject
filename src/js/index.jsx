@@ -18,18 +18,18 @@ function reloadThePage(url){
     makeGetRequest(url)
         .then(function(e){
             //resolved
-            console.log(e.target.status)
+            //console.log(e.target.status)
             if (e.target.status === 200){
                 window.location.reload(true);
             }else{
-                console.log("success but not 200 " + e.target.status)
+                //console.log("success but not 200 " + e.target.status)
                 setTimeout(function(){
                     reloadThePage(url)
                 },3600000);
             }
         }, function(e){
             //rejeceted
-            console.log("error " + e.target.status)
+            //console.log("error " + e.target.status)
             setTimeout(function(){
                 reloadThePage(url);
             },3600000);
@@ -38,6 +38,7 @@ function reloadThePage(url){
 
 
 document.addEventListener('DOMContentLoaded', function (){
+
     render(
         <Root/>,
         document.getElementById('root')
@@ -45,12 +46,9 @@ document.addEventListener('DOMContentLoaded', function (){
 
     window.scroll(0,0);
 
-    
-
     setTimeout(function(){
         console.log("performing reload...................");
         reloadThePage("https://jayrix.github.io/Announcement/");
     },3600000);
-
 
 });

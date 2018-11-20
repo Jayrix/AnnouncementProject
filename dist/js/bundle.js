@@ -511,18 +511,18 @@ function makeGetRequest(url) {
 function reloadThePage(url) {
     makeGetRequest(url).then(function (e) {
         //resolved
-        console.log(e.target.status);
+        //console.log(e.target.status)
         if (e.target.status === 200) {
             window.location.reload(true);
         } else {
-            console.log("success but not 200 " + e.target.status);
+            //console.log("success but not 200 " + e.target.status)
             setTimeout(function () {
                 reloadThePage(url);
             }, 3600000);
         }
     }, function (e) {
         //rejeceted
-        console.log("error " + e.target.status);
+        //console.log("error " + e.target.status)
         setTimeout(function () {
             reloadThePage(url);
         }, 3600000);
@@ -530,6 +530,7 @@ function reloadThePage(url) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+
     (0, _reactDom.render)(_react2.default.createElement(_Root2.default, null), document.getElementById('root'));
 
     window.scroll(0, 0);
