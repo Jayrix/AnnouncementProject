@@ -498,8 +498,46 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function makeGetRequest(url) {
+    return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.onload = resolve;
+        xhr.onerror = reject;
+        xhr.send(null);
+    });
+}
+
+function reloadThePage(url) {
+    makeGetRequest(url).then(function (e) {
+        //resolved
+        console.log(e.target.status);
+        if (e.target.status === 200) {
+            window.location.reload(true);
+        } else {
+            console.log("success but not 200 " + e.target.status);
+            setTimeout(function () {
+                reloadThePage(url);
+            }, 3600000);
+        }
+    }, function (e) {
+        //rejeceted
+        console.log("error " + e.target.status);
+        setTimeout(function () {
+            reloadThePage(url);
+        }, 3600000);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     (0, _reactDom.render)(_react2.default.createElement(_Root2.default, null), document.getElementById('root'));
+
+    window.scroll(0, 0);
+
+    setTimeout(function () {
+        console.log("performing reload...................");
+        reloadThePage("https://jayrix.github.io/Announcement/");
+    }, 3600000);
 });
 
 /***/ }),
@@ -23653,7 +23691,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
         _react2.default.createElement(
             "h2",
             { "class": "announcementTitle" },
-            "Otwarcie gabinetu edokrynologicznego od grudnia 2018"
+            "Otwarcie gabinetu endokrynologicznego od grudnia 2018"
         ),
         _react2.default.createElement(
             "article",
@@ -23693,7 +23731,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
                         _react2.default.createElement(
                             "p",
                             null,
-                            "Absolwentka \u015Al\u0105skiej Akademii Medycznej w Katowicach w 1989. Asystent w Oddziale Chor\xF3b Wewn\u0119trznych w Suchej Beskidzkiej oraz w poradni endokrynologicznej tamtejszegoo szpitala."
+                            "Absolwentka \u015Al\u0105skiej Akademii Medycznej w Katowicach w 1989. Asystent w Oddziale Chor\xF3b Wewn\u0119trznych w Suchej Beskidzkiej oraz w Poradni Endokrynologicznej tamtejszegoo szpitala."
                         ),
                         _react2.default.createElement(
                             "div",

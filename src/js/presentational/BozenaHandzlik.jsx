@@ -4,7 +4,7 @@ const BozenaHandzlik = (props) =>  {
 
     return (
         <li class="announcementRoot">
-            <h2 class="announcementTitle">Otwarcie gabinetu edokrynologicznego od grudnia 2018</h2>
+            <h2 class="announcementTitle">Otwarcie gabinetu endokrynologicznego od grudnia 2018</h2>
             <article class="announcementContent">
                 <section class="overviewSection">
                     <div class="textContainer">
@@ -18,7 +18,7 @@ const BozenaHandzlik = (props) =>  {
                         <div class="additionalInfo">
                             <p>
                                 Absolwentka Śląskiej Akademii Medycznej w Katowicach w 1989. Asystent w Oddziale Chorób Wewnętrznych
-                                w Suchej Beskidzkiej oraz w poradni endokrynologicznej tamtejszegoo szpitala.
+                                w Suchej Beskidzkiej oraz w Poradni Endokrynologicznej tamtejszegoo szpitala.
                             </p>
                             <div class="appointementInfo">
                                 <p>Przyjęcia odbywać się w poniedziałki, dwa razy w miesiącu.</p>
@@ -55,6 +55,7 @@ const BozenaHandzlik = (props) =>  {
                     <p>Chętnych zapraszamy do rejestracji na I-szym piętrze</p>
                 </section>
             </article>
+            {/* <iframe src="http://www.srw-baratin.eu/ekran/all" allow="fullscreen"></iframe> */}
         </li>
     );
 }
