@@ -508,24 +508,26 @@ function makeGetRequest(url) {
     });
 }
 
+function reloadOncePerTime(reloadFunction, url, ms) {
+    setTimeout(function () {
+        reloadFunction(url);
+    }, ms);
+}
+
 function reloadThePage(url) {
     makeGetRequest(url).then(function (e) {
         //resolved
-        //console.log(e.target.status)
+        console.log(e.target.status);
         if (e.target.status === 200) {
             window.location.reload(true);
         } else {
-            //console.log("success but not 200 " + e.target.status)
-            setTimeout(function () {
-                reloadThePage(url);
-            }, 3600000);
+            //console.log("resolved but not 200 " + e.target.status)
+            reloadOncePerTime(reloadThePage, url, 3600000);
         }
     }, function (e) {
         //rejeceted
-        //console.log("error " + e.target.status)
-        setTimeout(function () {
-            reloadThePage(url);
-        }, 3600000);
+        console.log("error " + e.target.status);
+        reloadOncePerTime(reloadThePage, url, 3600000);
     });
 }
 
@@ -23688,24 +23690,24 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
 
     return _react2.default.createElement(
         "li",
-        { "class": "announcementRoot" },
+        { className: "announcementRoot" },
         _react2.default.createElement(
             "h2",
-            { "class": "announcementTitle" },
+            { className: "announcementTitle" },
             "Otwarcie gabinetu endokrynologicznego od grudnia 2018"
         ),
         _react2.default.createElement(
             "article",
-            { "class": "announcementContent" },
+            { className: "announcementContent" },
             _react2.default.createElement(
                 "section",
-                { "class": "overviewSection" },
+                { className: "overviewSection" },
                 _react2.default.createElement(
                     "div",
-                    { "class": "textContainer" },
+                    { className: "textContainer" },
                     _react2.default.createElement(
                         "div",
-                        { "class": "personData" },
+                        { className: "personData" },
                         _react2.default.createElement(
                             "h3",
                             null,
@@ -23713,7 +23715,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
                         ),
                         _react2.default.createElement(
                             "ul",
-                            { "class": "specializationList" },
+                            { className: "specializationList" },
                             _react2.default.createElement(
                                 "li",
                                 null,
@@ -23728,7 +23730,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
                     ),
                     _react2.default.createElement(
                         "div",
-                        { "class": "additionalInfo" },
+                        { className: "additionalInfo" },
                         _react2.default.createElement(
                             "p",
                             null,
@@ -23736,7 +23738,7 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
                         ),
                         _react2.default.createElement(
                             "div",
-                            { "class": "appointementInfo" },
+                            { className: "appointementInfo" },
                             _react2.default.createElement(
                                 "p",
                                 null,
@@ -23757,13 +23759,13 @@ var BozenaHandzlik = function BozenaHandzlik(props) {
                 ),
                 _react2.default.createElement(
                     "div",
-                    { "class": "imageContainer" },
+                    { className: "imageContainer" },
                     _react2.default.createElement("img", { src: "./dist/img/endokrynologia.jpg", alt: "Obrazk przedstawiaj\u0105cy logo endokrynologii", title: "Gabinet Endokrynologiczny" })
                 )
             ),
             _react2.default.createElement(
                 "section",
-                { "class": "servicesSection" },
+                { className: "servicesSection" },
                 _react2.default.createElement(
                     "h3",
                     null,

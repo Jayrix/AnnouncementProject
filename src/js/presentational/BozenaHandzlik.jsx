@@ -3,24 +3,24 @@ import React from 'react';
 const BozenaHandzlik = (props) =>  {
 
     return (
-        <li class="announcementRoot">
-            <h2 class="announcementTitle">Otwarcie gabinetu endokrynologicznego od grudnia 2018</h2>
-            <article class="announcementContent">
-                <section class="overviewSection">
-                    <div class="textContainer">
-                        <div class="personData">
+        <li className="announcementRoot">
+            <h2 className="announcementTitle">Otwarcie gabinetu endokrynologicznego od grudnia 2018</h2>
+            <article className="announcementContent">
+                <section className="overviewSection">
+                    <div className="textContainer">
+                        <div className="personData">
                             <h3>dr Bożena Handzlik:</h3>
-                            <ul class="specializationList">
+                            <ul className="specializationList">
                                 <li>specjalista endokrynolog</li>
                                 <li>specjalista chorób wewnętrznych</li>
                             </ul>
                         </div>
-                        <div class="additionalInfo">
+                        <div className="additionalInfo">
                             <p>
                                 Absolwentka Śląskiej Akademii Medycznej w Katowicach w 1989. Asystent w Oddziale Chorób Wewnętrznych
                                 w Suchej Beskidzkiej oraz w Poradni Endokrynologicznej tamtejszegoo szpitala.
                             </p>
-                            <div class="appointementInfo">
+                            <div className="appointementInfo">
                                 <p>Przyjęcia odbywać się w poniedziałki, dwa razy w miesiącu.</p>
                                 <p>Wizyty tylko prywatne.</p>
                                 <p>Koszt: 110 zł, w tym USG tarczycy.</p>
@@ -28,11 +28,11 @@ const BozenaHandzlik = (props) =>  {
                         </div>
                         
                     </div>
-                    <div class='imageContainer'>
+                    <div className='imageContainer'>
                         <img src="./dist/img/endokrynologia.jpg" alt="Obrazk przedstawiający logo endokrynologii" title="Gabinet Endokrynologiczny"/>
                     </div>
                 </section>
-                <section class="servicesSection">
+                <section className="servicesSection">
                     <h3>Zakres działalności:</h3>
                     <ul>
                         <li>
