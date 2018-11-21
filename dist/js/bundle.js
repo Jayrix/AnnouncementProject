@@ -544,7 +544,12 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(20);
+var isOnline = __webpack_require__(21);
+
+//zmienne konfiguracyjne reload
+var GET_URL = "https://jayrix.github.io/Announcement/";
+var STATUS_CHECK_MS = 300000;
+var PAGE_RELOAD_MS = 1800000;
 
 //funkcje odpowiedzialne za odswiezanie
 function makeGetRequest(url) {
@@ -571,12 +576,12 @@ function reloadThePage(url) {
             window.location.reload(true);
         } else {
             console.log("resolved but status is  " + e.target.status);
-            reloadOncePerTime(reloadThePage, url, 600000);
+            reloadOncePerTime(reloadThePage, url, STATUS_CHECK_MS);
         }
     }, function (e) {
         //rejected
         console.log("error " + e.target.status);
-        reloadOncePerTime(reloadThePage, url, 600000);
+        reloadOncePerTime(reloadThePage, url, STATUS_CHECK_MS);
     });
 }
 
@@ -593,12 +598,12 @@ document.addEventListener('DOMContentLoaded', function () {
             if (online) {
                 clearInterval(reloadIntervalID);
                 console.log("performing reload...................");
-                reloadThePage("https://jayrix.github.io/TestEnvironment/");
+                reloadThePage(GET_URL);
             } else {
                 console.log("Brak połączenia internetowego");
             }
         });
-    }, 1800000);
+    }, PAGE_RELOAD_MS);
 });
 
 /***/ }),
@@ -23664,6 +23669,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -23672,14 +23679,84 @@ var _BozenaHandzlik = __webpack_require__(19);
 
 var _BozenaHandzlik2 = _interopRequireDefault(_BozenaHandzlik);
 
+var _SzczepionkiGrypa = __webpack_require__(20);
+
+var _SzczepionkiGrypa2 = _interopRequireDefault(_SzczepionkiGrypa);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var AnnouncementList = function AnnouncementList(props) {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    return _react2.default.createElement(_BozenaHandzlik2.default, null);
-};
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+//zmienne konfiguracyjne sliding w lewo
+var SLIDE_INTERVAL_MS = 3000;
+
+var AnnouncementList = function (_Component) {
+    _inherits(AnnouncementList, _Component);
+
+    function AnnouncementList(props) {
+        _classCallCheck(this, AnnouncementList);
+
+        var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
+
+        _this.state = {
+            styleConfig: {
+                transition: 'right 1.5s',
+                right: '1920px'
+            }
+        };
+        return _this;
+    }
+
+    _createClass(AnnouncementList, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+
+            // this.slideListIntervalID = setTimeout(()=>{
+            //     this.setState({styleConfig: {transition: 'right 1.5s',right:`${window.screen.width}px`}},
+            //      ()=> {console.log(this.state.styleConfig)})
+            // },SLIDE_INTERVAL_MS)
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+
+            clearTimeout(this.slideListIntervalID);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            console.log(this.state.styleConfig);
+            return _react2.default.createElement(
+                'section',
+                { className: 'mainListContainer' },
+                _react2.default.createElement(
+                    'ul',
+                    { className: 'mainList', style: this.state.styleConfig },
+                    _react2.default.createElement(_BozenaHandzlik2.default, null),
+                    _react2.default.createElement(_SzczepionkiGrypa2.default, null)
+                )
+            );
+        }
+    }]);
+
+    return AnnouncementList;
+}(_react.Component);
 
 exports.default = AnnouncementList;
+
+// const AnnouncementList = (props) => {
+
+//     return (
+//         <BozenaHandzlik/>
+//     )
+
+// }
+
+// export default AnnouncementList;
 
 /***/ }),
 /* 19 */
@@ -23702,7 +23779,7 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// class BozenaHandzlik extends ReactDOM.Component{
+// class BozenaHandzlik extends Component{
 //     constructor(props){
 //         super(props)
 //     }
@@ -23735,8 +23812,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 //                         </div>
 //                         <div className='imageContainer'>
-//                             <img alt="Endokrynologia" title="Gabinet Endokrynologiczny"/>
-//                             {/* <img src="./dist/img/endokrynologia.jpg" alt="Endokrynologia" title="Gabinet Endokrynologiczny"/> */}
+//                             {/* <img alt="Endokrynologia" title="Gabinet Endokrynologiczny"/> */}
+//                             <img src="./dist/img/endokrynologia.jpg" alt="Endokrynologia" title="Gabinet Endokrynologiczny"/>
 //                         </div>
 //                     </section>
 //                     <section className="servicesSection">
@@ -23764,7 +23841,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //                 </article>
 //                 {/* <iframe src="http://www.srw-baratin.eu/ekran/all" allow="fullscreen"></iframe>  */}
 //             </li>
-//         );
+//         )
 //     }
 
 // }
@@ -23941,7 +24018,53 @@ exports.default = BozenaHandzlik;
 "use strict";
 
 
-const publicIp = __webpack_require__(21);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
+
+    return _react2.default.createElement(
+        "li",
+        { className: "announcementRoot" },
+        _react2.default.createElement(
+            "article",
+            { className: "vaccineContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/vaccine.jpg", alt: "Szczepionka", title: "Szczepionka" })
+            ),
+            _react2.default.createElement(
+                "strong",
+                null,
+                "UWAGA! UWAGA!"
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "vaccineText" },
+                "Informujemy, \u017Ce szczepienia dla senior\xF3w (powy\u017Cej 65 roku \u017Cycia) s\u0105\xA0darmowe."
+            )
+        )
+    );
+};
+
+exports.default = SzczepionkiGrypa;
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(22);
 
 const defaults = {
 	timeout: 5000,
@@ -23955,12 +24078,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(22);
+const isIp = __webpack_require__(23);
 
 const defaults = {
 	timeout: 5000
@@ -24006,12 +24129,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(23);
+const ipRegex = __webpack_require__(24);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24019,7 +24142,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

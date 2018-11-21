@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
 
-// class BozenaHandzlik extends ReactDOM.Component{
+// class BozenaHandzlik extends Component{
 //     constructor(props){
 //         super(props)
 //     }
@@ -34,8 +34,8 @@ import ReactDOM from 'react-dom';
                             
 //                         </div>
 //                         <div className='imageContainer'>
-//                             <img alt="Endokrynologia" title="Gabinet Endokrynologiczny"/>
-//                             {/* <img src="./dist/img/endokrynologia.jpg" alt="Endokrynologia" title="Gabinet Endokrynologiczny"/> */}
+//                             {/* <img alt="Endokrynologia" title="Gabinet Endokrynologiczny"/> */}
+//                             <img src="./dist/img/endokrynologia.jpg" alt="Endokrynologia" title="Gabinet Endokrynologiczny"/>
 //                         </div>
 //                     </section>
 //                     <section className="servicesSection">
@@ -63,7 +63,7 @@ import ReactDOM from 'react-dom';
 //                 </article>
 //                 {/* <iframe src="http://www.srw-baratin.eu/ekran/all" allow="fullscreen"></iframe>  */}
 //             </li>
-//         );
+//         )
 //     }
 
 // }

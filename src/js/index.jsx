@@ -3,6 +3,11 @@ import {render} from 'react-dom';
 import Root from './containers/Root.jsx'
 const isOnline = require('is-online');
 
+//zmienne konfiguracyjne reload
+const GET_URL = "https://jayrix.github.io/Announcement/"
+const STATUS_CHECK_MS = 300000;
+const PAGE_RELOAD_MS = 1800000;
+
 //funkcje odpowiedzialne za odswiezanie
 function makeGetRequest(url){
     return new Promise(function (resolve,reject){
@@ -29,12 +34,12 @@ function reloadThePage(url) {
                 window.location.reload(true);
             } else {
                 console.log("resolved but status is  " + e.target.status)
-                reloadOncePerTime(reloadThePage, url, 600000);
+                reloadOncePerTime(reloadThePage, url, STATUS_CHECK_MS);
             }
         }, function (e) {
             //rejected
             console.log("error " + e.target.status)
-            reloadOncePerTime(reloadThePage, url, 600000);
+            reloadOncePerTime(reloadThePage, url, STATUS_CHECK_MS);
         });
 }
 
@@ -56,11 +61,11 @@ document.addEventListener('DOMContentLoaded', function (){
             if(online){
                 clearInterval(reloadIntervalID);
                 console.log("performing reload...................");
-                reloadThePage("https://jayrix.github.io/TestEnvironment/");
+                reloadThePage(GET_URL);
             }else{
                 console.log("Brak połączenia internetowego");
             }
         });
-    },1800000);
+    },PAGE_RELOAD_MS);
 
 });
