@@ -71,7 +71,8 @@ import ReactDOM from 'react-dom';
 const BozenaHandzlik = (props) =>  {
 
     return (
-        <li className="announcementRoot">
+        
+        <div>
             <h2 className="announcementTitle">Otwarcie gabinetu endokrynologicznego od grudnia 2018</h2>
             <article className="announcementContent">
                 <section className="overviewSection">
@@ -125,7 +126,8 @@ const BozenaHandzlik = (props) =>  {
                 </section>
             </article>
             {/* <iframe src="http://www.srw-baratin.eu/ekran/all" allow="fullscreen"></iframe>  */}
-        </li>
+            </div>
+        
     );
 }
 

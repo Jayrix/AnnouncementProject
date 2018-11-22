@@ -23703,43 +23703,98 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
+            announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null)],
             styleConfig: {
-                transition: 'right 1.5s',
-                right: '1920px'
+                transition: '0',
+                right: '0px'
             }
         };
+
+        _this.announcements = [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null)];
+
+        _this.reorderedAnnouncements = [];
         return _this;
     }
 
     _createClass(AnnouncementList, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-
-            // this.slideListIntervalID = setTimeout(()=>{
-            //     this.setState({styleConfig: {transition: 'right 1.5s',right:`${window.screen.width}px`}},
-            //      ()=> {console.log(this.state.styleConfig)})
-            // },SLIDE_INTERVAL_MS)
+        key: 'firstToLast',
+        value: function firstToLast(array) {
+            var newArray = array.slice(0);
+            newArray.push(newArray.shift());
+            return newArray;
         }
     }, {
-        key: 'componentWillUnmount',
-        value: function componentWillUnmount() {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
 
-            clearTimeout(this.slideListIntervalID);
+            // this.slideListIntervalID = setInterval(()=>{
+            //     this.setState({styleConfig: {transition: 'right 1.5s',right:`${window.screen.width}px`}},
+            //         ()=> {
+            //                 console.log("at interval " + this.state.styleConfig);
+            //                 this.reappendLiTimeoutID = setTimeout(()=>{
+            //                     this.setState({styleConfig: {transition: '0',right:`${window.screen.width}px`}},
+            //                         ()=> {
+            //                             this.announcements = this.firstToLast(this.announcements);
+            //                             console.log(this.announcements);
+            //                             this.setState({styleConfig: {transition: '0',right:'0px'}});
+            //                         }
+            //                     )
+            //                 },SLIDE_INTERVAL_MS/2);
+            //             }
+            //     )
+            // },SLIDE_INTERVAL_MS);
+
+            // this.slideListIntervalID = setInterval(()=>{
+            //     this.setState({styleConfig: {transition: 'right 1.5s',right:`${window.screen.width}px`}},
+            //         ()=> {
+            //                 console.log("at interval " + this.state.styleConfig);
+            //         }
+            //     )
+            // },SLIDE_INTERVAL_MS);
+
+            this.slideListIntervalID = setInterval(function () {
+                _this2.reorderedAnnouncements = _this2.firstToLast(_this2.state.announcements);
+                console.log(_this2.reorderedAnnouncements);
+                _this2.setState({
+                    announcements: _this2.reorderedAnnouncements
+                });
+            }, SLIDE_INTERVAL_MS);
         }
     }, {
         key: 'render',
         value: function render() {
-            console.log(this.state.styleConfig);
+            //console.log("component rendered")
             return _react2.default.createElement(
                 'section',
                 { className: 'mainListContainer' },
                 _react2.default.createElement(
                     'ul',
-                    { className: 'mainList', style: this.state.styleConfig },
-                    _react2.default.createElement(_BozenaHandzlik2.default, null),
-                    _react2.default.createElement(_SzczepionkiGrypa2.default, null)
+                    { className: 'mainList' },
+                    this.state.announcements.map(function (el, index) {
+                        return _react2.default.createElement(
+                            'li',
+                            { key: index, className: 'announcementRoot' },
+                            el
+                        );
+                    })
                 )
             );
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate() {
+            // console.log('component did Update')
+            // setTimeout(()=>{
+            //     console.log("Timeout Activating")
+            //     this.announcements = this.firstToLast(this.announcements);
+            // },3000);
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+
+            clearInterval(this.slideListIntervalID);
         }
     }]);
 
@@ -23747,16 +23802,6 @@ var AnnouncementList = function (_Component) {
 }(_react.Component);
 
 exports.default = AnnouncementList;
-
-// const AnnouncementList = (props) => {
-
-//     return (
-//         <BozenaHandzlik/>
-//     )
-
-// }
-
-// export default AnnouncementList;
 
 /***/ }),
 /* 19 */
@@ -23849,8 +23894,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var BozenaHandzlik = function BozenaHandzlik(props) {
 
     return _react2.default.createElement(
-        'li',
-        { className: 'announcementRoot' },
+        'div',
+        null,
         _react2.default.createElement(
             'h2',
             { className: 'announcementTitle' },
@@ -24031,8 +24076,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
 
     return _react2.default.createElement(
-        "li",
-        { className: "announcementRoot" },
+        "div",
+        null,
         _react2.default.createElement(
             "article",
             { className: "vaccineContent" },
@@ -24049,7 +24094,13 @@ var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
             _react2.default.createElement(
                 "p",
                 { className: "vaccineText" },
-                "Informujemy, \u017Ce szczepienia dla senior\xF3w (powy\u017Cej 65 roku \u017Cycia) s\u0105\xA0darmowe."
+                "Informujemy, \u017Ce wznowiono darmowe szczepienia przeciw grypie dla senior\xF3w (powy\u017Cej 65 roku \u017Cycia).",
+                _react2.default.createElement("br", null),
+                _react2.default.createElement(
+                    "span",
+                    null,
+                    "Dla pozosta\u0142ych os\xF3b szczepienia w cenie 35 z\u0142."
+                )
             )
         )
     );
