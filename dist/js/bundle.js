@@ -23692,7 +23692,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 //zmienne konfiguracyjne sliding w lewo
-var SLIDE_INTERVAL_MS = 3000;
+var SLIDE_INTERVAL_MS = 6000;
 
 var AnnouncementList = function (_Component) {
     _inherits(AnnouncementList, _Component);
@@ -23704,6 +23704,7 @@ var AnnouncementList = function (_Component) {
 
         _this.state = {
             announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null)],
+            movedLeft: false,
             styleConfig: {
                 transition: '0',
                 right: '0px'
@@ -23717,6 +23718,20 @@ var AnnouncementList = function (_Component) {
     }
 
     _createClass(AnnouncementList, [{
+        key: 'copyFirstToLast',
+        value: function copyFirstToLast(array) {
+            var newArray = array.slice(0);
+            newArray.push(newArray[0]);
+            return newArray;
+        }
+    }, {
+        key: 'removeFirst',
+        value: function removeFirst(array) {
+            var newArray = array.slice(0);
+            newArray.shift();
+            return newArray;
+        }
+    }, {
         key: 'firstToLast',
         value: function firstToLast(array) {
             var newArray = array.slice(0);
@@ -23753,12 +23768,39 @@ var AnnouncementList = function (_Component) {
             //     )
             // },SLIDE_INTERVAL_MS);
 
+            // this.slideListIntervalID = setInterval(()=>{
+            //     this.reorderedAnnouncements = this.firstToLast(this.state.announcements);
+            //     //console.log(this.reorderedAnnouncements);
+            //     this.setState({
+            //         announcements : this.reorderedAnnouncements
+            //     })
+            // },SLIDE_INTERVAL_MS);
+
+
+            //initialize the announcements by copying the first element to the new arrays end
+            this.reorderedAnnouncements = this.copyFirstToLast(this.state.announcements);
+            this.setState({
+                announcements: this.reorderedAnnouncements
+            });
+
             this.slideListIntervalID = setInterval(function () {
-                _this2.reorderedAnnouncements = _this2.firstToLast(_this2.state.announcements);
-                console.log(_this2.reorderedAnnouncements);
-                _this2.setState({
-                    announcements: _this2.reorderedAnnouncements
-                });
+                if (!_this2.state.movedLeft) {
+                    _this2.setState({
+                        movedLeft: true
+                    }, function () {
+                        setTimeout(function () {
+                            if (_this2.state.movedLeft) {
+                                _this2.reorderedAnnouncements = _this2.removeFirst(_this2.state.announcements);
+                                console.log(_this2.reorderedAnnouncements);
+                                _this2.setState({
+                                    announcements: _this2.reorderedAnnouncements,
+                                    movedLeft: false
+
+                                });
+                            }
+                        }, SLIDE_INTERVAL_MS / 2);
+                    });
+                }
             }, SLIDE_INTERVAL_MS);
         }
     }, {
@@ -23770,7 +23812,9 @@ var AnnouncementList = function (_Component) {
                 { className: 'mainListContainer' },
                 _react2.default.createElement(
                     'ul',
-                    { className: 'mainList' },
+                    { className: 'mainList',
+                        style: this.state.movedLeft === false ? { transition: '0', right: '0px' } : { transition: 'right 1.5s', right: window.screen.width + 'px' }
+                    },
                     this.state.announcements.map(function (el, index) {
                         return _react2.default.createElement(
                             'li',

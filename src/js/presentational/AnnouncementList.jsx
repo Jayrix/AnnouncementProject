@@ -4,7 +4,7 @@ import SzczepionkiGrypa from './SzczepionkiGrypa.jsx';
 
 
 //zmienne konfiguracyjne sliding w lewo
-const SLIDE_INTERVAL_MS = 3000;
+const SLIDE_INTERVAL_MS = 6000;
 
 class AnnouncementList extends Component{
     constructor(props){
@@ -15,6 +15,7 @@ class AnnouncementList extends Component{
                 <BozenaHandzlik/>,
                 <SzczepionkiGrypa/>
             ],
+            movedLeft: false,
             styleConfig: {   
                 transition: '0',
                 right:'0px'
@@ -27,6 +28,18 @@ class AnnouncementList extends Component{
         ]
 
         this.reorderedAnnouncements = [];
+    }
+
+    copyFirstToLast(array){
+        let newArray = array.slice(0);
+        newArray.push(newArray[0]);
+        return newArray;
+    }
+
+    removeFirst(array){
+        let newArray = array.slice(0);
+        newArray.shift();
+        return newArray;
     }
 
     firstToLast(array){
@@ -62,12 +75,41 @@ class AnnouncementList extends Component{
         //     )
         // },SLIDE_INTERVAL_MS);
 
+        // this.slideListIntervalID = setInterval(()=>{
+        //     this.reorderedAnnouncements = this.firstToLast(this.state.announcements);
+        //     //console.log(this.reorderedAnnouncements);
+        //     this.setState({
+        //         announcements : this.reorderedAnnouncements
+        //     })
+        // },SLIDE_INTERVAL_MS);
+
+
+        //initialize the announcements by copying the first element to the new arrays end
+        this.reorderedAnnouncements = this.copyFirstToLast(this.state.announcements);
+        this.setState({
+            announcements : this.reorderedAnnouncements
+        });
+
         this.slideListIntervalID = setInterval(()=>{
-            this.reorderedAnnouncements = this.firstToLast(this.state.announcements);
-            console.log(this.reorderedAnnouncements);
-            this.setState({
-                announcements : this.reorderedAnnouncements
-            })
+            if (!this.state.movedLeft){
+                this.setState({
+                    movedLeft : true
+                }, ()=> {
+                    setTimeout(()=>{
+                        if(this.state.movedLeft){
+                            this.reorderedAnnouncements = this.removeFirst(this.state.announcements);
+                            console.log(this.reorderedAnnouncements);
+                            this.setState({
+                                announcements : this.reorderedAnnouncements,
+                                movedLeft : false
+                                
+                            });
+                        }
+                        
+                    },SLIDE_INTERVAL_MS/2);
+                });
+            }
+            
         },SLIDE_INTERVAL_MS);
     }
 
@@ -75,7 +117,10 @@ class AnnouncementList extends Component{
         //console.log("component rendered")
         return (
             <section className="mainListContainer">
-                <ul className="mainList">
+                <ul className="mainList"
+                    style={this.state.movedLeft === false ? {transition: '0', right: '0px'} : 
+                                                            {transition: 'right 1.5s', right: `${window.screen.width}px`}}
+                >
                     {this.state.announcements.map((el,index)=>(
                         <li key={index} className="announcementRoot">
                             {el}
