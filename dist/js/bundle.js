@@ -548,11 +548,14 @@ var isOnline = __webpack_require__(21);
 
 //zmienne konfiguracyjne reload
 var GET_URL = "https://jayrix.github.io/Announcement/";
-var STATUS_CHECK_MS = 300000;
-var PAGE_RELOAD_MS = 1800000;
+// const STATUS_CHECK_MS = 300000;
+// const PAGE_RELOAD_MS = 1800000;
+var STATUS_CHECK_MS = 2000;
+var PAGE_RELOAD_MS = 3000;
+var requestingHTTPInProgress = false;
 
 //funkcje odpowiedzialne za odswiezanie
-function makeGetRequest(url) {
+function makeGetRequest(url, intervalID) {
     return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", url, true);
@@ -568,12 +571,19 @@ function reloadOncePerTime(reloadFunction, url, ms) {
     }, ms);
 }
 
-function reloadThePage(url) {
-    makeGetRequest(url).then(function (e) {
+function reloadThePage(url, intervalID) {
+    makeGetRequest(url, intervalID).then(function (e) {
         //resolved
         console.log(e.target.status);
         if (e.target.status === 200) {
-            window.location.reload(true);
+            //check if current url is on local drive or not, if true try switching to online
+            if (window.location.href.startsWith("file:")) {
+                console.log("switching to online");
+                window.location.assign(GET_URL);
+            } else {
+                window.location.reload(true);
+                requestingHTTPInProgress = false;
+            }
         } else {
             console.log("resolved but status is  " + e.target.status);
             reloadOncePerTime(reloadThePage, url, STATUS_CHECK_MS);
@@ -592,18 +602,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.scroll(0, 0);
 
-    var reloadIntervalID = void 0;
-    reloadIntervalID = setInterval(function () {
-        isOnline().then(function (online) {
-            if (online) {
-                clearInterval(reloadIntervalID);
-                console.log("performing reload...................");
-                reloadThePage(GET_URL);
-            } else {
-                console.log("Brak połączenia internetowego");
-            }
-        });
-    }, PAGE_RELOAD_MS);
+    if (requestingHTTPInProgress) {
+        console.log("SKIPPING: Requests are being made with " + STATUS_CHECK_MS + " time gaps already.");
+    } else {
+        var reloadIntervalID = void 0;
+        reloadIntervalID = setInterval(function () {
+            isOnline().then(function (online) {
+                if (online) {
+                    clearInterval(reloadIntervalID);
+                    console.log("performing reload checks...................");
+                    requestingHTTPInProgress = true;
+                    reloadThePage(GET_URL);
+                } else {
+                    console.log("no internet connection");
+                }
+            });
+        }, PAGE_RELOAD_MS);
+    }
 });
 
 /***/ }),
