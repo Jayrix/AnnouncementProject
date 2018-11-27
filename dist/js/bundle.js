@@ -548,10 +548,10 @@ var isOnline = __webpack_require__(21);
 
 //zmienne konfiguracyjne reload
 var GET_URL = "https://jayrix.github.io/Announcement/";
-// const STATUS_CHECK_MS = 300000;
-// const PAGE_RELOAD_MS = 1800000;
-var STATUS_CHECK_MS = 2000;
-var PAGE_RELOAD_MS = 3000;
+var STATUS_CHECK_MS = 300000;
+var PAGE_RELOAD_MS = 1800000;
+// const STATUS_CHECK_MS = 2000;
+// const PAGE_RELOAD_MS = 3000;
 
 //funkcje odpowiedzialne za odswiezanie
 function makeGetRequest(url) {
@@ -23703,6 +23703,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 //zmienne konfiguracyjne sliding w lewo
 var SLIDE_INTERVAL_MS = 6000;
+var SLIDE_DISTANCE = window.screen.width;
 
 var AnnouncementList = function (_Component) {
     _inherits(AnnouncementList, _Component);
@@ -23714,16 +23715,10 @@ var AnnouncementList = function (_Component) {
 
         _this.state = {
             announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null)],
-            movedLeft: false,
-            styleConfig: {
-                transition: '0',
-                right: '0px'
-            }
-        };
+            movedLeft: false
 
-        _this.announcements = [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null)];
-
-        _this.reorderedAnnouncements = [];
+            //buffer array for sliding
+        };_this.reorderedAnnouncements = [];
         return _this;
     }
 
@@ -23742,41 +23737,9 @@ var AnnouncementList = function (_Component) {
             return newArray;
         }
     }, {
-        key: 'firstToLast',
-        value: function firstToLast(array) {
-            var newArray = array.slice(0);
-            newArray.push(newArray.shift());
-            return newArray;
-        }
-    }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
             var _this2 = this;
-
-            // this.slideListIntervalID = setInterval(()=>{
-            //     this.setState({styleConfig: {transition: 'right 1.5s',right:`${window.screen.width}px`}},
-            //         ()=> {
-            //                 console.log("at interval " + this.state.styleConfig);
-            //                 this.reappendLiTimeoutID = setTimeout(()=>{
-            //                     this.setState({styleConfig: {transition: '0',right:`${window.screen.width}px`}},
-            //                         ()=> {
-            //                             this.announcements = this.firstToLast(this.announcements);
-            //                             console.log(this.announcements);
-            //                             this.setState({styleConfig: {transition: '0',right:'0px'}});
-            //                         }
-            //                     )
-            //                 },SLIDE_INTERVAL_MS/2);
-            //             }
-            //     )
-            // },SLIDE_INTERVAL_MS);
-
-            // this.slideListIntervalID = setInterval(()=>{
-            //     this.setState({styleConfig: {transition: 'right 1.5s',right:`${window.screen.width}px`}},
-            //         ()=> {
-            //                 console.log("at interval " + this.state.styleConfig);
-            //         }
-            //     )
-            // },SLIDE_INTERVAL_MS);
 
             // this.slideListIntervalID = setInterval(()=>{
             //     this.reorderedAnnouncements = this.firstToLast(this.state.announcements);
@@ -23786,22 +23749,17 @@ var AnnouncementList = function (_Component) {
             //     })
             // },SLIDE_INTERVAL_MS);
 
-
-            //initialize the announcements by copying the first element to the new arrays end
-            this.reorderedAnnouncements = this.copyFirstToLast(this.state.announcements);
-            this.setState({
-                announcements: this.reorderedAnnouncements
-            });
-
             this.slideListIntervalID = setInterval(function () {
                 if (!_this2.state.movedLeft) {
+                    _this2.reorderedAnnouncements = _this2.copyFirstToLast(_this2.state.announcements);
                     _this2.setState({
-                        movedLeft: true
+                        movedLeft: true,
+                        announcements: _this2.reorderedAnnouncements
                     }, function () {
                         setTimeout(function () {
                             if (_this2.state.movedLeft) {
                                 _this2.reorderedAnnouncements = _this2.removeFirst(_this2.state.announcements);
-                                console.log(_this2.reorderedAnnouncements);
+                                //console.log(this.reorderedAnnouncements);
                                 _this2.setState({
                                     announcements: _this2.reorderedAnnouncements,
                                     movedLeft: false
@@ -23823,7 +23781,7 @@ var AnnouncementList = function (_Component) {
                 _react2.default.createElement(
                     'ul',
                     { className: 'mainList',
-                        style: this.state.movedLeft === false ? { transition: '0', right: '0px' } : { transition: 'right 1.5s', right: window.screen.width + 'px' }
+                        style: this.state.movedLeft === false ? { transition: 'right 0s', right: '0px' } : { transition: 'right 1.5s', right: SLIDE_DISTANCE + 'px' }
                     },
                     this.state.announcements.map(function (el, index) {
                         return _react2.default.createElement(
@@ -23837,13 +23795,7 @@ var AnnouncementList = function (_Component) {
         }
     }, {
         key: 'componentDidUpdate',
-        value: function componentDidUpdate() {
-            // console.log('component did Update')
-            // setTimeout(()=>{
-            //     console.log("Timeout Activating")
-            //     this.announcements = this.firstToLast(this.announcements);
-            // },3000);
-        }
+        value: function componentDidUpdate() {}
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {

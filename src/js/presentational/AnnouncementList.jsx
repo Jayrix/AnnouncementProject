@@ -5,6 +5,7 @@ import SzczepionkiGrypa from './SzczepionkiGrypa.jsx';
 
 //zmienne konfiguracyjne sliding w lewo
 const SLIDE_INTERVAL_MS = 6000;
+const SLIDE_DISTANCE = window.screen.width;
 
 class AnnouncementList extends Component{
     constructor(props){
@@ -15,18 +16,10 @@ class AnnouncementList extends Component{
                 <BozenaHandzlik/>,
                 <SzczepionkiGrypa/>
             ],
-            movedLeft: false,
-            styleConfig: {   
-                transition: '0',
-                right:'0px'
-            }
+            movedLeft: false
         }
 
-        this.announcements = [
-            <BozenaHandzlik/>,
-            <SzczepionkiGrypa/>
-        ]
-
+        //buffer array for sliding
         this.reorderedAnnouncements = [];
     }
 
@@ -42,39 +35,9 @@ class AnnouncementList extends Component{
         return newArray;
     }
 
-    firstToLast(array){
-        let newArray = array.slice(0);
-        newArray.push(newArray.shift());
-        return newArray;
-    }
-
     componentDidMount(){
+
         
-        // this.slideListIntervalID = setInterval(()=>{
-        //     this.setState({styleConfig: {transition: 'right 1.5s',right:`${window.screen.width}px`}},
-        //         ()=> {
-        //                 console.log("at interval " + this.state.styleConfig);
-        //                 this.reappendLiTimeoutID = setTimeout(()=>{
-        //                     this.setState({styleConfig: {transition: '0',right:`${window.screen.width}px`}},
-        //                         ()=> {
-        //                             this.announcements = this.firstToLast(this.announcements);
-        //                             console.log(this.announcements);
-        //                             this.setState({styleConfig: {transition: '0',right:'0px'}});
-        //                         }
-        //                     )
-        //                 },SLIDE_INTERVAL_MS/2);
-        //             }
-        //     )
-        // },SLIDE_INTERVAL_MS);
-
-        // this.slideListIntervalID = setInterval(()=>{
-        //     this.setState({styleConfig: {transition: 'right 1.5s',right:`${window.screen.width}px`}},
-        //         ()=> {
-        //                 console.log("at interval " + this.state.styleConfig);
-        //         }
-        //     )
-        // },SLIDE_INTERVAL_MS);
-
         // this.slideListIntervalID = setInterval(()=>{
         //     this.reorderedAnnouncements = this.firstToLast(this.state.announcements);
         //     //console.log(this.reorderedAnnouncements);
@@ -83,29 +46,23 @@ class AnnouncementList extends Component{
         //     })
         // },SLIDE_INTERVAL_MS);
 
-
-        //initialize the announcements by copying the first element to the new arrays end
-        this.reorderedAnnouncements = this.copyFirstToLast(this.state.announcements);
-        this.setState({
-            announcements : this.reorderedAnnouncements
-        });
-
         this.slideListIntervalID = setInterval(()=>{
             if (!this.state.movedLeft){
+                this.reorderedAnnouncements = this.copyFirstToLast(this.state.announcements);
                 this.setState({
-                    movedLeft : true
+                    movedLeft : true,
+                    announcements : this.reorderedAnnouncements
                 }, ()=> {
                     setTimeout(()=>{
                         if(this.state.movedLeft){
                             this.reorderedAnnouncements = this.removeFirst(this.state.announcements);
-                            console.log(this.reorderedAnnouncements);
+                            //console.log(this.reorderedAnnouncements);
                             this.setState({
                                 announcements : this.reorderedAnnouncements,
                                 movedLeft : false
                                 
                             });
-                        }
-                        
+                        } 
                     },SLIDE_INTERVAL_MS/2);
                 });
             }
@@ -118,8 +75,8 @@ class AnnouncementList extends Component{
         return (
             <section className="mainListContainer">
                 <ul className="mainList"
-                    style={this.state.movedLeft === false ? {transition: '0', right: '0px'} : 
-                                                            {transition: 'right 1.5s', right: `${window.screen.width}px`}}
+                    style={this.state.movedLeft === false ? {transition: 'right 0s', right: '0px'} : 
+                                                            {transition: 'right 1.5s', right: `${SLIDE_DISTANCE}px`}}
                 >
                     {this.state.announcements.map((el,index)=>(
                         <li key={index} className="announcementRoot">
@@ -133,11 +90,7 @@ class AnnouncementList extends Component{
     }
 
     componentDidUpdate(){
-        // console.log('component did Update')
-        // setTimeout(()=>{
-        //     console.log("Timeout Activating")
-        //     this.announcements = this.firstToLast(this.announcements);
-        // },3000);
+    
     }
 
     componentWillUnmount(){
