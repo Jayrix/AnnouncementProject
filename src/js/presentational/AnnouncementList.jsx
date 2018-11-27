@@ -4,7 +4,7 @@ import SzczepionkiGrypa from './SzczepionkiGrypa.jsx';
 
 
 //zmienne konfiguracyjne sliding w lewo
-const SLIDE_INTERVAL_MS = 6000;
+const SLIDE_INTERVAL_MS = 60000;
 const SLIDE_DISTANCE = window.screen.width;
 
 class AnnouncementList extends Component{
