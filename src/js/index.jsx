@@ -5,7 +5,7 @@ const isOnline = require('is-online');
 
 //zmienne konfiguracyjne reload
 const GET_URL = "https://jayrix.github.io/Announcement/"
-const STATUS_CHECK_MS = 300000;
+const STATUS_CHECK_MS = 600000;
 const PAGE_RELOAD_MS = 1800000;
 // const STATUS_CHECK_MS = 2000;
 // const PAGE_RELOAD_MS = 3000;
@@ -53,11 +53,11 @@ function reloadThePage(url) {
                 });
         }else{
             //not online
-            console.log("no internet connection, retrying a check in " + PAGE_RELOAD_MS + " ms");
+            console.log("no internet connection, retrying a check in " + STATUS_CHECK_MS + " ms");
             setTimeout(()=>{
                 console.log("retrying online check");
                 reloadThePage(url);
-            },PAGE_RELOAD_MS);
+            },STATUS_CHECK_MS);
         }
     });  
 }
