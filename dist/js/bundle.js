@@ -500,7 +500,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var isOnline = __webpack_require__(21);
 
-//zmienne konfiguracyjne reload
+//zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
 var STATUS_CHECK_MS = 600000;
 var PAGE_RELOAD_MS = 1800000;
@@ -23740,14 +23740,6 @@ var AnnouncementList = function (_Component) {
         key: 'componentDidMount',
         value: function componentDidMount() {
             var _this2 = this;
-
-            // this.slideListIntervalID = setInterval(()=>{
-            //     this.reorderedAnnouncements = this.firstToLast(this.state.announcements);
-            //     //console.log(this.reorderedAnnouncements);
-            //     this.setState({
-            //         announcements : this.reorderedAnnouncements
-            //     })
-            // },SLIDE_INTERVAL_MS);
 
             this.slideListIntervalID = setInterval(function () {
                 if (!_this2.state.movedLeft) {

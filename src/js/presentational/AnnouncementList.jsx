@@ -37,15 +37,6 @@ class AnnouncementList extends Component{
 
     componentDidMount(){
 
-        
-        // this.slideListIntervalID = setInterval(()=>{
-        //     this.reorderedAnnouncements = this.firstToLast(this.state.announcements);
-        //     //console.log(this.reorderedAnnouncements);
-        //     this.setState({
-        //         announcements : this.reorderedAnnouncements
-        //     })
-        // },SLIDE_INTERVAL_MS);
-
         this.slideListIntervalID = setInterval(()=>{
             if (!this.state.movedLeft){
                 this.reorderedAnnouncements = this.copyFirstToLast(this.state.announcements);
