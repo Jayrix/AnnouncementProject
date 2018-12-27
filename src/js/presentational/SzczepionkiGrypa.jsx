@@ -11,11 +11,11 @@ const SzczepionkiGrypa = (props) => {
                 </div>
                 <strong>UWAGA! UWAGA!</strong>
                 <p className="vaccineText">
-                    Informujemy, że wznowiono darmowe szczepienia przeciw grypie dla seniorów (powyżej 65 roku życia). 
+                    Informujemy, że na ten sezon zakończyliśmy program szczepień przeciw grypie. 
                     <br/>
-                    <span>
+                    {/* <span>
                     Dla pozostałych osób szczepienia w cenie 35 zł.
-                    </span>
+                    </span> */}
                 </p>
             </article>
         </div>

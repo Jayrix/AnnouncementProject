@@ -24011,13 +24011,8 @@ var SzczepionkiGrypa = function SzczepionkiGrypa(props) {
             _react2.default.createElement(
                 "p",
                 { className: "vaccineText" },
-                "Informujemy, \u017Ce wznowiono darmowe szczepienia przeciw grypie dla senior\xF3w (powy\u017Cej 65 roku \u017Cycia).",
-                _react2.default.createElement("br", null),
-                _react2.default.createElement(
-                    "span",
-                    null,
-                    "Dla pozosta\u0142ych os\xF3b szczepienia w cenie 35 z\u0142."
-                )
+                "Informujemy, \u017Ce na ten sezon zako\u0144czyli\u015Bmy program szczepie\u0144 przeciw grypie.",
+                _react2.default.createElement("br", null)
             )
         )
     );
