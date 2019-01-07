@@ -6,7 +6,7 @@ const BozenaHandzlik = (props) =>  {
     return (
         
         <div>
-            <h2 className="announcementTitle">Otwarcie gabinetu endokrynologicznego od grudnia 2018</h2>
+            <h2 className="announcementTitle">Otwarcie gabinetu endokrynologicznego</h2>
             <article className="announcementContent">
                 <section className="overviewSection">
                     <div className="textContainer">
@@ -19,9 +19,9 @@ const BozenaHandzlik = (props) =>  {
                         </div>
                         <div className="additionalInfo">
                             <div className="appointementInfo">
-                                <p>Przyjęcia odbywać się będą w poniedziałki, dwa razy w miesiącu.</p>
+                                <p>Przyjęcia odbywają się będą w poniedziałki, dwa razy w miesiącu.</p>
                                 <p>Wizyty tylko prywatne.</p>
-                                <p>Koszt: 110 zł, w tym USG tarczycy.</p>
+                                <p>Koszt: pierwsza wizyta 150 zł, kolejne 130 zł.</p>
                             </div>
                         </div>
                         
