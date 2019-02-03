@@ -23693,6 +23693,10 @@ var _SzczepionkiGrypa = __webpack_require__(20);
 
 var _SzczepionkiGrypa2 = _interopRequireDefault(_SzczepionkiGrypa);
 
+var _PSP = __webpack_require__(25);
+
+var _PSP2 = _interopRequireDefault(_PSP);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23702,8 +23706,11 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 //zmienne konfiguracyjne sliding w lewo
-var SLIDE_INTERVAL_MS = 60000;
+var SLIDE_INTERVAL_MS = 3000;
 var SLIDE_DISTANCE = window.screen.width;
+
+//zmienne pomocnicze
+var psp_slide_id = 1;
 
 var AnnouncementList = function (_Component) {
     _inherits(AnnouncementList, _Component);
@@ -23714,7 +23721,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null)],
+            announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_PSP2.default, { id: psp_slide_id })],
             movedLeft: false
 
             //buffer array for sliding
@@ -24134,6 +24141,33 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var PSP = function PSP(props) {
+    return _react2.default.createElement(
+        "div",
+        { className: "PSP_imageContainer" },
+        _react2.default.createElement("img", { src: "./dist/img/psp/psp" + props.id + ".png", alt: "Slajd prezentacji PSP" })
+    );
+};
+
+exports.default = PSP;
 
 /***/ })
 /******/ ]);

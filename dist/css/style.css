@@ -215,3 +215,17 @@ article.vaccineContent {
     display: block;
     text-indent: 7%;
 } */
+
+
+div.PSP_imageContainer {
+    display: inline-block;
+    width: 100%;
+}
+
+div.PSP_imageContainer img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+
+}

@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
 import BozenaHandzlik from './BozenaHandzlik.jsx'
 import SzczepionkiGrypa from './SzczepionkiGrypa.jsx';
+import PSP from "./PSP.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
-const SLIDE_INTERVAL_MS = 60000;
+const SLIDE_INTERVAL_MS = 3000;
 const SLIDE_DISTANCE = window.screen.width;
+
+//zmienne pomocnicze
+let psp_slide_id = 1;
 
 class AnnouncementList extends Component{
     constructor(props){
@@ -14,7 +18,8 @@ class AnnouncementList extends Component{
         this.state = {
             announcements : [
                 <BozenaHandzlik/>,
-                <SzczepionkiGrypa/>
+                <SzczepionkiGrypa/>,
+                <PSP id={psp_slide_id}/>
             ],
             movedLeft: false
         }
