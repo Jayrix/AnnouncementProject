@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import BozenaHandzlik from './BozenaHandzlik.jsx'
 import SzczepionkiGrypa from './SzczepionkiGrypa.jsx';
+import TestyNaGrype from './TestyNaGrype.jsx';
 import PSP from "./PSP.jsx";
 
 
@@ -27,6 +28,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <TestyNaGrype/>,
                 <BozenaHandzlik/>,
                 <SzczepionkiGrypa/>,
                 ...psp_array
