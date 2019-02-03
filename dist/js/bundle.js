@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(21);
+var isOnline = __webpack_require__(22);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23693,7 +23693,7 @@ var _SzczepionkiGrypa = __webpack_require__(20);
 
 var _SzczepionkiGrypa2 = _interopRequireDefault(_SzczepionkiGrypa);
 
-var _PSP = __webpack_require__(25);
+var _PSP = __webpack_require__(21);
 
 var _PSP2 = _interopRequireDefault(_PSP);
 
@@ -23706,11 +23706,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 //zmienne konfiguracyjne sliding w lewo
-var SLIDE_INTERVAL_MS = 3000;
+var SLIDE_INTERVAL_MS = 60000;
+var PSP_SLIDE_INTERVAL_MS = 10000;
+var FIRST_ANN_REMOVAL_MS = 4000;
 var SLIDE_DISTANCE = window.screen.width;
 
 //zmienne pomocnicze
-var psp_slide_id = 1;
+var psp_slide_id = void 0;
+var psp_array = [];
+
+//incjalizacja tablicy z ogloszeniami PSP
+for (psp_slide_id = 1; psp_slide_id < 12; psp_slide_id++) {
+    psp_array.push(_react2.default.createElement(_PSP2.default, { key: psp_slide_id, id: psp_slide_id }));
+}
+
+//console.log(psp_array);
 
 var AnnouncementList = function (_Component) {
     _inherits(AnnouncementList, _Component);
@@ -23721,7 +23731,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_PSP2.default, { id: psp_slide_id })],
+            announcements: [_react2.default.createElement(_BozenaHandzlik2.default, null), _react2.default.createElement(_SzczepionkiGrypa2.default, null)].concat(psp_array),
             movedLeft: false
 
             //buffer array for sliding
@@ -23743,12 +23753,15 @@ var AnnouncementList = function (_Component) {
             newArray.shift();
             return newArray;
         }
+
+        //function responsible for sliding
+
     }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
+        key: 'slideTimeout',
+        value: function slideTimeout(timeout) {
             var _this2 = this;
 
-            this.slideListIntervalID = setInterval(function () {
+            this.slideListTimeoutID = setTimeout(function () {
                 if (!_this2.state.movedLeft) {
                     _this2.reorderedAnnouncements = _this2.copyFirstToLast(_this2.state.announcements);
                     _this2.setState({
@@ -23765,10 +23778,21 @@ var AnnouncementList = function (_Component) {
 
                                 });
                             }
-                        }, SLIDE_INTERVAL_MS / 2);
+                        }, FIRST_ANN_REMOVAL_MS);
                     });
                 }
-            }, SLIDE_INTERVAL_MS);
+                if (_this2.state.announcements[1].type.name === "PSP") {
+                    _this2.slideTimeout(PSP_SLIDE_INTERVAL_MS);
+                } else {
+                    _this2.slideTimeout(SLIDE_INTERVAL_MS);
+                }
+            }, timeout);
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+
+            this.slideTimeout(SLIDE_INTERVAL_MS);
         }
     }, {
         key: 'render',
@@ -23794,12 +23818,16 @@ var AnnouncementList = function (_Component) {
         }
     }, {
         key: 'componentDidUpdate',
-        value: function componentDidUpdate() {}
+        value: function componentDidUpdate() {
+            // if(this.state.announcements[1].type.name === "PSP"){
+            //     console.log('teraz PSP');
+            // }
+        }
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
 
-            clearInterval(this.slideListIntervalID);
+            clearTimeout(this.slideListTimeoutID);
         }
     }]);
 
@@ -24034,7 +24062,34 @@ exports.default = SzczepionkiGrypa;
 "use strict";
 
 
-const publicIp = __webpack_require__(22);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var PSP = function PSP(props) {
+    return _react2.default.createElement(
+        "div",
+        { className: "PSP_imageContainer" },
+        _react2.default.createElement("img", { src: "./dist/img/psp/psp" + props.id + ".png", alt: "Slajd prezentacji PSP" })
+    );
+};
+
+exports.default = PSP;
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(23);
 
 const defaults = {
 	timeout: 5000,
@@ -24048,12 +24103,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(23);
+const isIp = __webpack_require__(24);
 
 const defaults = {
 	timeout: 5000
@@ -24099,12 +24154,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(24);
+const ipRegex = __webpack_require__(25);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24112,7 +24167,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24141,33 +24196,6 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var PSP = function PSP(props) {
-    return _react2.default.createElement(
-        "div",
-        { className: "PSP_imageContainer" },
-        _react2.default.createElement("img", { src: "./dist/img/psp/psp" + props.id + ".png", alt: "Slajd prezentacji PSP" })
-    );
-};
-
-exports.default = PSP;
 
 /***/ })
 /******/ ]);

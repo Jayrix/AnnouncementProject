@@ -5,11 +5,21 @@ import PSP from "./PSP.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
-const SLIDE_INTERVAL_MS = 3000;
+const SLIDE_INTERVAL_MS = 60000;
+const PSP_SLIDE_INTERVAL_MS = 10000;
+const FIRST_ANN_REMOVAL_MS = 4000;
 const SLIDE_DISTANCE = window.screen.width;
 
 //zmienne pomocnicze
-let psp_slide_id = 1;
+let psp_slide_id;
+let psp_array = [];
+
+//incjalizacja tablicy z ogloszeniami PSP
+for (psp_slide_id = 1; psp_slide_id < 12; psp_slide_id++){
+    psp_array.push(<PSP key={psp_slide_id} id={psp_slide_id} />);
+}
+
+//console.log(psp_array);
 
 class AnnouncementList extends Component{
     constructor(props){
@@ -19,7 +29,7 @@ class AnnouncementList extends Component{
             announcements : [
                 <BozenaHandzlik/>,
                 <SzczepionkiGrypa/>,
-                <PSP id={psp_slide_id}/>
+                ...psp_array
             ],
             movedLeft: false
         }
@@ -40,9 +50,9 @@ class AnnouncementList extends Component{
         return newArray;
     }
 
-    componentDidMount(){
-
-        this.slideListIntervalID = setInterval(()=>{
+    //function responsible for sliding
+    slideTimeout(timeout){
+        this.slideListTimeoutID = setTimeout(()=>{
             if (!this.state.movedLeft){
                 this.reorderedAnnouncements = this.copyFirstToLast(this.state.announcements);
                 this.setState({
@@ -59,11 +69,22 @@ class AnnouncementList extends Component{
                                 
                             });
                         } 
-                    },SLIDE_INTERVAL_MS/2);
+                    },FIRST_ANN_REMOVAL_MS);
                 });
             }
-            
-        },SLIDE_INTERVAL_MS);
+            if (this.state.announcements[1].type.name === "PSP"){
+                this.slideTimeout(PSP_SLIDE_INTERVAL_MS);
+            } else{
+                this.slideTimeout(SLIDE_INTERVAL_MS);
+            }
+                
+        },timeout);
+    }
+
+    componentDidMount(){
+
+        this.slideTimeout(SLIDE_INTERVAL_MS);
+
     }
 
     render(){
@@ -86,12 +107,14 @@ class AnnouncementList extends Component{
     }
 
     componentDidUpdate(){
-    
+        // if(this.state.announcements[1].type.name === "PSP"){
+        //     console.log('teraz PSP');
+        // }
     }
 
     componentWillUnmount(){
         
-        clearInterval(this.slideListIntervalID);
+        clearTimeout(this.slideListTimeoutID);
     }
 }
 
