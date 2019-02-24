@@ -30,7 +30,6 @@ class AnnouncementList extends Component{
             announcements : [
                 <TestyNaGrype/>,
                 <BozenaHandzlik/>,
-                <SzczepionkiGrypa/>,
                 ...psp_array
             ],
             movedLeft: false

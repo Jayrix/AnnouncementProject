@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+//placeholder
 const Announcement = (props) =>  {
 
     return (
