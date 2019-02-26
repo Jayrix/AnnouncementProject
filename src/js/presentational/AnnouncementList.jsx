@@ -28,7 +28,6 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
-                <TestyNaGrype/>,
                 <BozenaHandzlik/>,
                 ...psp_array
             ],
