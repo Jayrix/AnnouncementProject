@@ -3,21 +3,29 @@ import BozenaHandzlik from './BozenaHandzlik.jsx'
 import SzczepionkiGrypa from './SzczepionkiGrypa.jsx';
 import TestyNaGrype from './TestyNaGrype.jsx';
 import PSP from "./PSP.jsx";
+import Geers from "./Geers.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
 const SLIDE_INTERVAL_MS = 60000;
 const PSP_SLIDE_INTERVAL_MS = 10000;
+const GEERS_SLIDE_INTERVAL_MS = 15000;
 const FIRST_ANN_REMOVAL_MS = 4000;
 const SLIDE_DISTANCE = window.screen.width;
 
 //zmienne pomocnicze
 let psp_slide_id;
 let psp_array = [];
+let geers_slide_id;
+let geers_array=[];
 
-//incjalizacja tablicy z ogloszeniami PSP
+//incjalizacja tablic z ogloszeniami złożonymi 
 for (psp_slide_id = 1; psp_slide_id < 12; psp_slide_id++){
     psp_array.push(<PSP key={psp_slide_id} id={psp_slide_id} />);
+}
+
+for (geers_slide_id = 1; geers_slide_id < 4; geers_slide_id++){
+    geers_array.push(<Geers key={geers_slide_id} id={geers_slide_id} />);
 }
 
 //console.log(psp_array);
@@ -29,6 +37,7 @@ class AnnouncementList extends Component{
         this.state = {
             announcements : [
                 <BozenaHandzlik/>,
+                ...geers_array,
                 ...psp_array
             ],
             movedLeft: false
@@ -74,6 +83,8 @@ class AnnouncementList extends Component{
             }
             if (this.state.announcements[1].type.name === "PSP"){
                 this.slideTimeout(PSP_SLIDE_INTERVAL_MS);
+            } else if(this.state.announcements[1].type.name === "Geers"){
+                this.slideTimeout(GEERS_SLIDE_INTERVAL_MS);
             } else{
                 this.slideTimeout(SLIDE_INTERVAL_MS);
             }
