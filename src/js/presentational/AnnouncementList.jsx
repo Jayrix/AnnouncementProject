@@ -4,6 +4,7 @@ import SzczepionkiGrypa from './SzczepionkiGrypa.jsx';
 import TestyNaGrype from './TestyNaGrype.jsx';
 import PSP from "./PSP.jsx";
 import Geers from "./Geers.jsx";
+import CR from "./CR.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -36,6 +37,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <CR />,
                 <BozenaHandzlik/>,
                 ...geers_array,
                 ...psp_array
