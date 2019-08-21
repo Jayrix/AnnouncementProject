@@ -37,6 +37,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <SzczepionkiGrypa/>,
                 <CR />,
                 <BozenaHandzlik/>,
                 ...geers_array,

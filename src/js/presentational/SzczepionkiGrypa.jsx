@@ -11,11 +11,7 @@ const SzczepionkiGrypa = (props) => {
                 </div>
                 <strong>UWAGA! UWAGA!</strong>
                 <p className="vaccineText">
-                    Informujemy, że na ten sezon zakończyliśmy program szczepień przeciw grypie. 
-                    <br/>
-                    {/* <span>
-                    Dla pozostałych osób szczepienia w cenie 35 zł.
-                    </span> */}
+                    Zbliża się sezon grypowy. Przypominamy, że najskuteczniejszą profilaktyką przeciw grypie są szczepienia (zwłaszcza u osób starszych). 
                 </p>
             </article>
         </div>
