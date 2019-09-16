@@ -38,12 +38,12 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <SzczepionkiGrypa/>,
                 <Podomedis/>,
-                // <SzczepionkiGrypa/>,
-                // <CR />,
-                // <BozenaHandzlik/>,
-                // ...geers_array,
-                // ...psp_array
+                <CR />,
+                <BozenaHandzlik/>,
+                ...geers_array,
+                ...psp_array
             ],
             movedLeft: false
         }

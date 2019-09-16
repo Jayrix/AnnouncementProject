@@ -23754,7 +23754,7 @@ var AnnouncementList = function (_Component) {
         var _this = _possibleConstructorReturn(this, (AnnouncementList.__proto__ || Object.getPrototypeOf(AnnouncementList)).call(this, props));
 
         _this.state = {
-            announcements: [_react2.default.createElement(_Podomedis2.default, null)],
+            announcements: [_react2.default.createElement(_SzczepionkiGrypa2.default, null), _react2.default.createElement(_Podomedis2.default, null), _react2.default.createElement(_CR2.default, null), _react2.default.createElement(_BozenaHandzlik2.default, null)].concat(geers_array, psp_array),
             movedLeft: false
 
             //buffer array for sliding
