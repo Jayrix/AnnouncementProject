@@ -16,7 +16,6 @@ const Podomedis = props => {
                         <li>pedicure pielęgnacyjny</li>
                         <li>pedicure podologiczny</li>
                         <li>pielęgnacja zdrowej płytki paznokcia oraz zmienionej chorobowo (skracanie, opracowywanie, szlifowanie)</li>
-                        <li>usuwanie hiperkeratoz (odciski, modzele)</li>
                     </ul>
                     <ul>
                         <li>terapia pękających pięt, rozpadliny</li>
@@ -24,18 +23,22 @@ const Podomedis = props => {
                         <li>rekonstrukcja paznokci</li>
                         <li>paznokcie wrastające</li>
                         <li>brodawki wirusowe</li>
+                        <li>usuwanie hiperkeratoz (odciski, modzele)</li>
                     </ul>
                 </div>
-                <div className="corner"></div>
-                <div className="corner"></div>
-                <div className="corner"></div>
-                <div className="corner"></div>
             </section>
             <footer>
                 <div className="imageContainer">
-                    <img src="" alt=""/>
+                    <img src="./dist/img/podomedis/podomedis_logo2.png" alt=""/>
                 </div>
-                <p></p>
+                <div className="footerText">
+                    <p><strong>tel. 735 049 669</strong>, Cieszyn ul. Bielska 37 / II piętro</p>
+                    <span>. . . . . . .</span>
+                    <p>www.podolog.cieszyn.pl</p>
+                    <span>. . . . . . .</span>
+                    <p>gabinet@podolog.cieszyn.pl</p>
+                </div>
+            
             </footer>
         </article>
 
