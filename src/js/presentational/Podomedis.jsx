@@ -26,6 +26,7 @@ const Podomedis = props => {
                         <li>usuwanie hiperkeratoz (odciski, modzele)</li>
                     </ul>
                 </div>
+                <div id="podologyContainer"><img src="./dist/img/podomedis/podologia.jpg" alt=""/></div>
             </section>
             <footer>
                 <div className="imageContainer">

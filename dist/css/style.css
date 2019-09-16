@@ -422,6 +422,7 @@ div.CRContent #footerSection p:last-of-type {
 
 .podomedisContent .main {
     height: 81vh;
+    position: relative;
 }
 
 .podomedisContent .main .imageContainer{
@@ -450,7 +451,7 @@ div.CRContent #footerSection p:last-of-type {
     font-size: 4rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: rgb(50, 58, 54);
+    color: rgb(58, 51, 50);
     
 }
 
@@ -482,6 +483,22 @@ div.CRContent #footerSection p:last-of-type {
     color: rgb(50, 56, 58);
 
 }
+
+.podomedisContent #podologyContainer {
+    position:absolute;
+    top:5vh;
+    right:5vw;
+    
+    
+}
+
+.podomedisContent #podologyContainer img {
+    max-height:100%;
+    width:auto;
+    border-radius: 8px;
+    box-shadow: 10px 5px 10px rgb(115, 120, 121);
+}
+
 
 .podomedisContent footer{
     height: 19vh;

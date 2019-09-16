@@ -24468,6 +24468,11 @@ var Podomedis = function Podomedis(props) {
                         "usuwanie hiperkeratoz (odciski, modzele)"
                     )
                 )
+            ),
+            _react2.default.createElement(
+                "div",
+                { id: "podologyContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/podomedis/podologia.jpg", alt: "" })
             )
         ),
         _react2.default.createElement(
