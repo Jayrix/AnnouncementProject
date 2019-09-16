@@ -416,3 +416,60 @@ div.CRContent #footerSection strong {
 div.CRContent #footerSection p:last-of-type {
     font-size: 2.5rem;
 }
+
+/*********************************************/
+
+
+.podomedisContent .main {
+    height: 83vh;
+}
+
+.podomedisContent .main .imageContainer{
+    width: 15%;
+    margin: 0.7% auto 0 auto;
+}
+
+.podomedisContent #logoImg {
+    max-width: 100%;
+    height: auto;
+}
+
+.podomedisContent .main h2{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(39, 122, 155);
+    text-decoration-line: overline;
+    line-height: 1rem;
+    margin-top: 1.3%;
+}
+
+.podomedisContent .main h3{
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: rgb(89, 97, 100);
+}
+
+.podomedisContent .main .dots {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1rem;
+    margin:1% 0;
+    color: rgb(40,178,75);
+    
+}
+
+.podomedisContent .listsContainer {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+}
+
+.podomedisContent footer{
+    height: 17vh;
+    background: rgb(0, 145, 214);
+}
