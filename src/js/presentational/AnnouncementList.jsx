@@ -6,6 +6,7 @@ import PSP from "./PSP.jsx";
 import Geers from "./Geers.jsx";
 import CR from "./CR.jsx";
 import Podomedis from "./Podomedis.jsx";
+import Medea from "./Medea.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -38,6 +39,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <Medea/>,
                 <SzczepionkiGrypa/>,
                 <Podomedis/>,
                 <CR />,
