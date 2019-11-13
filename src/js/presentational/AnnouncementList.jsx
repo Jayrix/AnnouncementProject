@@ -7,6 +7,9 @@ import Geers from "./Geers.jsx";
 import CR from "./CR.jsx";
 import Podomedis from "./Podomedis.jsx";
 import Medea from "./Medea.jsx";
+import Fibroscan1 from "./Fibroscan/Fibroscan1.jsx";
+import Fibroscan2 from "./Fibroscan/Fibroscan2.jsx";
+import Fibroscan3 from "./Fibroscan/Fibroscan3.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -39,6 +42,9 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <Fibroscan1/>,
+                <Fibroscan2/>,
+                <Fibroscan3/>,
                 <Medea/>,
                 <SzczepionkiGrypa/>,
                 <Podomedis/>,
