@@ -5,7 +5,6 @@ import Geers from "./Geers.jsx";
 import CR from "./CR.jsx";
 import Podomedis from "./Podomedis.jsx";
 import Medea from "./Medea.jsx";
-import Osteoporoza from "./Osteoporoza.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -38,7 +37,6 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
-                <Osteoporoza/>,
                 <Medea/>,
                 <Podomedis/>,
                 <CR />,
