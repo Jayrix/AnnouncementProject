@@ -5,12 +5,13 @@ import Geers from "./Geers.jsx";
 import CR from "./CR.jsx";
 import Podomedis from "./Podomedis.jsx";
 import Medea from "./Medea.jsx";
+import CovidInfo from "./CovidInfo.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
-const SLIDE_INTERVAL_MS = 60000;
+const SLIDE_INTERVAL_MS = 40000;
 const PSP_SLIDE_INTERVAL_MS = 10000;
-const GEERS_SLIDE_INTERVAL_MS = 15000;
+const GEERS_SLIDE_INTERVAL_MS = 12000;
 const FIRST_ANN_REMOVAL_MS = 4000;
 const SLIDE_DISTANCE = window.screen.width;
 
@@ -38,10 +39,12 @@ class AnnouncementList extends Component{
         this.state = {
             announcements : [
                 <Medea/>,
+                <CovidInfo/>,
                 <Podomedis/>,
                 <CR />,
                 <BozenaHandzlik/>,
                 ...geers_array,
+                <CovidInfo/>,
                 ...psp_array
             ],
             movedLeft: false
