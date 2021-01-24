@@ -75,10 +75,10 @@ document.addEventListener('DOMContentLoaded', function (){
     //set Fullscreen mode in js because of issues with browser rescaling after some TVs being turned on with browser already loaded
     //in Firefox config full-screen-api.allow-trusted-requests-only needs to be FALSE
     //Compiz handled this by itself before
-    if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
-    }
-    
+    //document.documentElement.requestFullscreen();
+    //now wmctrl shell script handles this
+
+
     setTimeout(function(){
         reloadThePage(GET_URL);
     },PAGE_RELOAD_MS);

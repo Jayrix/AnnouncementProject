@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import BozenaHandzlik from './BozenaHandzlik.jsx'
 import PSP from "./PSP.jsx";
 import Geers from "./Geers.jsx";
 import CR from "./CR.jsx";
@@ -42,7 +41,6 @@ class AnnouncementList extends Component{
                 <CovidInfo/>,
                 <Podomedis/>,
                 <CR />,
-                <BozenaHandzlik/>,
                 ...geers_array,
                 <CovidInfo/>,
                 ...psp_array
