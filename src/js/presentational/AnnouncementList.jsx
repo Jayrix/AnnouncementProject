@@ -5,6 +5,8 @@ import CR from "./CR.jsx";
 import Podomedis from "./Podomedis.jsx";
 import Medea from "./Medea.jsx";
 import CovidInfo from "./CovidInfo.jsx";
+import SzczepieniaCovid from "./SzczepieniaCovid.jsx";
+//import SzczepionkiGrypa from "./SzczepionkiGrypa.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -37,6 +39,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <SzczepieniaCovid/>,
                 <Medea/>,
                 <CovidInfo/>,
                 <Podomedis/>,
