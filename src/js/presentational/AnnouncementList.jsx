@@ -6,7 +6,7 @@ import Podomedis from "./Podomedis.jsx";
 import Medea from "./Medea.jsx";
 import CovidInfo from "./CovidInfo.jsx";
 import SzczepieniaCovid from "./SzczepieniaCovid.jsx";
-import LekiCovid from "./LekiCovid.jsx";
+import Antiviral from "./Antiviral.jsx";
 //import SzczepionkiGrypa from "./SzczepionkiGrypa.jsx";
 
 
@@ -40,7 +40,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
-                <LekiCovid/>,
+                <Antiviral/>,
                 <Medea/>,
                 <SzczepieniaCovid/>,
                 <CovidInfo/>,
