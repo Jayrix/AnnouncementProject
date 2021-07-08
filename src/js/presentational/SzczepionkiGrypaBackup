@@ -11,7 +11,7 @@ const SzczepionkiGrypa = (props) => {
                 </div>
                 <strong id="title">UWAGA! UWAGA!</strong>
                 <p className="vaccineText">
-                    WOLNE SZCZEPIONKI NA COVID-19 MARKI PFIZER! Informacja w rejestracji.
+                    Zbliża się sezon grypowy. Informujemy, że wznowiono <strong>PROGRAM DARMOWYCH SZCZEPIEŃ PRZECIW GRYPIE</strong> dla osób powyżej 65 roku życia (dla pierwszych 300 zgłoszeń).
                 </p>
             </article>
         </div>
@@ -20,3 +20,8 @@ const SzczepionkiGrypa = (props) => {
 }
 
 export default SzczepionkiGrypa;
+
+
+
+
+CSS ZROBIONY BACKUP
