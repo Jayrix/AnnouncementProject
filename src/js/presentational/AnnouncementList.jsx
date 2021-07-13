@@ -7,7 +7,6 @@ import Medea from "./Medea.jsx";
 import CovidInfo from "./CovidInfo.jsx";
 import SzczepieniaCovid from "./SzczepieniaCovid.jsx";
 import Antiviral from "./Antiviral.jsx";
-import SzczepionkiGrypa from "./SzczepionkiGrypa.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -40,15 +39,12 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
-                <SzczepionkiGrypa/>,
                 <Antiviral/>,
                 <Medea/>,
                 <SzczepieniaCovid/>,
-                <SzczepionkiGrypa/>,
                 <CovidInfo/>,
                 <Podomedis/>,
                 <CR />,
-                <SzczepionkiGrypa/>,
                 ...geers_array,
                 <CovidInfo/>,
                 ...psp_array
