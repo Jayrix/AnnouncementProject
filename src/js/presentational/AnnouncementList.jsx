@@ -7,6 +7,7 @@ import Medea from "./Medea.jsx";
 import CovidInfo from "./CovidInfo.jsx";
 import SzczepieniaCovid from "./SzczepieniaCovid.jsx";
 import Antiviral from "./Antiviral.jsx";
+import DrFiedor from "./DrFiedor.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -43,10 +44,10 @@ class AnnouncementList extends Component{
                 <Medea/>,
                 <SzczepieniaCovid/>,
                 <CovidInfo/>,
+                <DrFiedor/>,
                 <Podomedis/>,
                 <CR />,
                 ...geers_array,
-                <CovidInfo/>,
                 ...psp_array
             ],
             movedLeft: false

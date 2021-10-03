@@ -7,9 +7,9 @@ const SzczepieniaCovid = (props) => {
         <div>
             <article className="covidVaccineContent">
                 <p className="covidVaccineText">
-                    Drodzy Rodzice!
+                    COVID-19 ciągle groźny.
                     <br/>
-                    Z myślą o swoich dzieciach, szczepcie się na COVID-19.
+                    W naszej przychodni dalej można się szczepić.
                 </p>
             </article>
         </div>
