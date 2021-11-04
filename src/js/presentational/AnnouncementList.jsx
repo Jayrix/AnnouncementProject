@@ -10,6 +10,8 @@ import Antiviral from "./Antiviral.jsx";
 import DrFiedor from "./DrFiedor.jsx";
 import Profilaktyka40plus from "./Profilaktyka40plus.jsx";
 import Recepty from "./Recepty.jsx";
+import TestNaPrzeciwciala from "./TestNaPrzeciwciala.jsx";
+import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -42,6 +44,8 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <TrzeciaSzczepionka/>,
+                <TestNaPrzeciwciala/>,
                 <Recepty/>,
                 <Profilaktyka40plus/>,
                 <Antiviral/>,
