@@ -5,11 +5,11 @@ const TestNaPrzeciwciala = (props) => {
     return(
         <div>
             <article className="TestNaPrzeciwcialaContent">
+                <h1>
+                    TESTY NA PRZECIWCIAŁA POSZCZEPIENNE
+                </h1>
                 <p>
-                    TESTY NA PRZECIWCIAŁA
-                </p>
-                <p>
-                    W gabinecie zabiegowym dostępne testy na przeciwciała przeciw COVID-19. <strong> Cena 40 zł </strong>.
+                    W gabinecie zabiegowym dostępne testy na przeciwciała <strong>po szczepieniu</strong> przeciw COVID-19. <strong> Cena 40 zł </strong>.
                 </p>
             </article>
         </div>
