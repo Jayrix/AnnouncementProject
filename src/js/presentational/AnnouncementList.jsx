@@ -44,14 +44,11 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
-                <TrzeciaSzczepionka/>,
                 <TestNaPrzeciwciala/>,
                 <Recepty/>,
                 <Profilaktyka40plus/>,
                 <Antiviral/>,
                 <Medea/>,
-                <SzczepieniaCovid/>,
-                <CovidInfo/>,
                 <DrFiedor/>,
                 <Podomedis/>,
                 <CR />,
