@@ -12,10 +12,13 @@ import Profilaktyka40plus from "./Profilaktyka40plus.jsx";
 import Recepty from "./Recepty.jsx";
 import TestNaPrzeciwciala from "./TestNaPrzeciwciala.jsx";
 import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
+import Maseczki from "./Maseczki.jsx";
+import WstrzymanieSzczepien from "./WstrzymanieSzczepien.jsx";
+import ProgramSzczepien from "./ProgramSzczepien.jsx"
 
 
 //zmienne konfiguracyjne sliding w lewo
-const SLIDE_INTERVAL_MS = 40000;
+const SLIDE_INTERVAL_MS = 10000;
 const PSP_SLIDE_INTERVAL_MS = 10000;
 const GEERS_SLIDE_INTERVAL_MS = 12000;
 const FIRST_ANN_REMOVAL_MS = 4000;
@@ -44,6 +47,9 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <Maseczki/>,
+                <WstrzymanieSzczepien/>,
+                <ProgramSzczepien/>,
                 <TestNaPrzeciwciala/>,
                 <Recepty/>,
                 <Profilaktyka40plus/>,
