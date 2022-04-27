@@ -18,7 +18,7 @@ import ProgramSzczepien from "./ProgramSzczepien.jsx"
 
 
 //zmienne konfiguracyjne sliding w lewo
-const SLIDE_INTERVAL_MS = 10000;
+const SLIDE_INTERVAL_MS = 40000;
 const PSP_SLIDE_INTERVAL_MS = 10000;
 const GEERS_SLIDE_INTERVAL_MS = 12000;
 const FIRST_ANN_REMOVAL_MS = 4000;

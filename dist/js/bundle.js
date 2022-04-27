@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(34);
+var isOnline = __webpack_require__(35);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23752,7 +23752,7 @@ var _WstrzymanieSzczepien = __webpack_require__(33);
 
 var _WstrzymanieSzczepien2 = _interopRequireDefault(_WstrzymanieSzczepien);
 
-var _ProgramSzczepien = __webpack_require__(38);
+var _ProgramSzczepien = __webpack_require__(34);
 
 var _ProgramSzczepien2 = _interopRequireDefault(_ProgramSzczepien);
 
@@ -23765,7 +23765,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 //zmienne konfiguracyjne sliding w lewo
-var SLIDE_INTERVAL_MS = 10000;
+var SLIDE_INTERVAL_MS = 40000;
 var PSP_SLIDE_INTERVAL_MS = 10000;
 var GEERS_SLIDE_INTERVAL_MS = 12000;
 var FIRST_ANN_REMOVAL_MS = 4000;
@@ -24871,7 +24871,58 @@ exports.default = WstrzymanieSzczepien;
 "use strict";
 
 
-const publicIp = __webpack_require__(35);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ProgramSzczepien = function ProgramSzczepien(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "programSzczepienContent" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/programSzczepien/programSzczepien.jpg", alt: "programSzczepien", title: "programSzczepien" })
+            ),
+            _react2.default.createElement(
+                "strong",
+                { id: "title" },
+                "SZCZEPIENIA PRZECIW GRYPIE"
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "programSzczepienText" },
+                "Informujemy, \u017Ce w sezonie 2022/2023 Burmistrz Cieszyna planuje uruchomi\u0107 program bezp\u0142atnych szczepie\u0144 przeciwko grypie, ",
+                _react2.default.createElement(
+                    "strong",
+                    null,
+                    "dla mieszka\u0144c\xF3w Cieszyna powy\u017Cej 60 lub 65 roku \u017Cycia."
+                )
+            )
+        )
+    );
+};
+
+exports.default = ProgramSzczepien;
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(36);
 
 const defaults = {
 	timeout: 5000,
@@ -24885,12 +24936,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(36);
+const isIp = __webpack_require__(37);
 
 const defaults = {
 	timeout: 5000
@@ -24936,12 +24987,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(37);
+const ipRegex = __webpack_require__(38);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -24949,7 +25000,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24978,57 +25029,6 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
-
-/***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ProgramSzczepien = function ProgramSzczepien(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "programSzczepienContent" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/programSzczepien/programSzczepien.jpg", alt: "programSzczepien", title: "programSzczepien" })
-            ),
-            _react2.default.createElement(
-                "strong",
-                { id: "title" },
-                "SZCZEPIENIA PRZECIW GRYPIE"
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "programSzczepienText" },
-                "Informujemy, \u017Ce w sezonie 2022/2023 Burmistrz Cieszyna planuje uruchomi\u0107 program bezp\u0142atnych szczepie\u0144 przeciwko grypie, ",
-                _react2.default.createElement(
-                    "strong",
-                    null,
-                    "dla mieszka\u0144c\xF3w Cieszyna powy\u017Cej 60 lub 65 roku \u017Cycia."
-                )
-            )
-        )
-    );
-};
-
-exports.default = ProgramSzczepien;
 
 /***/ })
 /******/ ]);
