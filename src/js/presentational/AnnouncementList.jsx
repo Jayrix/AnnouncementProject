@@ -54,6 +54,7 @@ class AnnouncementList extends Component{
                 <Recepty/>,
                 <Profilaktyka40plus/>,
                 <Antiviral/>,
+                <Maseczki/>,
                 <Medea/>,
                 <DrFiedor/>,
                 <Podomedis/>,
