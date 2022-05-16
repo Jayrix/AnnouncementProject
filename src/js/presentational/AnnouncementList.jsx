@@ -14,7 +14,8 @@ import TestNaPrzeciwciala from "./TestNaPrzeciwciala.jsx";
 import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
 import Maseczki from "./Maseczki.jsx";
 import WstrzymanieSzczepien from "./WstrzymanieSzczepien.jsx";
-import ProgramSzczepien from "./ProgramSzczepien.jsx"
+import ProgramSzczepien from "./ProgramSzczepien.jsx";
+import Maseczki_Ukraina from "./Maseczki_Ukraina.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -48,6 +49,7 @@ class AnnouncementList extends Component{
         this.state = {
             announcements : [
                 <Maseczki/>,
+                <Maseczki_Ukraina/>,
                 <WstrzymanieSzczepien/>,
                 <ProgramSzczepien/>,
                 <TestNaPrzeciwciala/>,
@@ -55,6 +57,7 @@ class AnnouncementList extends Component{
                 <Profilaktyka40plus/>,
                 <Antiviral/>,
                 <Maseczki/>,
+                <Maseczki_Ukraina/>,
                 <Medea/>,
                 <DrFiedor/>,
                 <Podomedis/>,
