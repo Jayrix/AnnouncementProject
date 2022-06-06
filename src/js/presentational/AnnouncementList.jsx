@@ -16,6 +16,7 @@ import Maseczki from "./Maseczki.jsx";
 import WstrzymanieSzczepien from "./WstrzymanieSzczepien.jsx";
 import ProgramSzczepien from "./ProgramSzczepien.jsx";
 import Maseczki_Ukraina from "./Maseczki_Ukraina.jsx";
+import Rejestracja from "./Rejestracja.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -48,6 +49,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <Rejestracja/>,
                 <Maseczki/>,
                 <Maseczki_Ukraina/>,
                 <WstrzymanieSzczepien/>,
