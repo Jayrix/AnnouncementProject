@@ -4,19 +4,20 @@ import Geers from "./Geers.jsx";
 import CR from "./CR.jsx";
 import Podomedis from "./Podomedis.jsx";
 import Medea from "./Medea.jsx";
-import CovidInfo from "./CovidInfo.jsx";
-import SzczepieniaCovid from "./SzczepieniaCovid.jsx";
+//import CovidInfo from "./CovidInfo.jsx";
+//import SzczepieniaCovid from "./SzczepieniaCovid.jsx";
 import Antiviral from "./Antiviral.jsx";
 import DrFiedor from "./DrFiedor.jsx";
 import Profilaktyka40plus from "./Profilaktyka40plus.jsx";
 import Recepty from "./Recepty.jsx";
 import TestNaPrzeciwciala from "./TestNaPrzeciwciala.jsx";
-import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
+//import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
 import Maseczki from "./Maseczki.jsx";
 import WstrzymanieSzczepien from "./WstrzymanieSzczepien.jsx";
 import ProgramSzczepien from "./ProgramSzczepien.jsx";
 import Maseczki_Ukraina from "./Maseczki_Ukraina.jsx";
 import Rejestracja from "./Rejestracja.jsx";
+import CzwartaDawka from './CzwartaDawka.jsx';
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -49,6 +50,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <CzwartaDawka/>,
                 <Rejestracja/>,
                 <Maseczki/>,
                 <Maseczki_Ukraina/>,
@@ -58,6 +60,7 @@ class AnnouncementList extends Component{
                 <Recepty/>,
                 <Profilaktyka40plus/>,
                 <Antiviral/>,
+                <CzwartaDawka/>,
                 <Maseczki/>,
                 <Maseczki_Ukraina/>,
                 <Medea/>,
