@@ -7,11 +7,11 @@ const TrzeciaSzczepionka = (props) => {
         <div>
             <article className="TrzeciaSzczepionkaContent">
                 <div className="imageContainer">
-                    <img src="./dist/img/trzeciaSzczepionka/trzecia.jpg" alt="Szczepionka-Covid" title="Szczepionka przeciw Covid"/>
+                    <img src="./dist/img/trzeciaSzczepionka/osteoporoza.jpg" alt="osteoporoza" title="osteoporoza"/>
                 </div>
-                <strong id="title">TRZECIA DAWKA SZCZEPIONKI</strong>
+                <strong id="title">BADANIE NA OSTEOPOROZĘ</strong>
                 <p className="TrzeciaSzczepionkaText">
-                    Szczepimy przeciwko COVID-19. Trzecia dawka szczepionki firmy <strong>Pfizer</strong> dostępna niezależnie od rodzaju poprzednich dawek.
+                    Informujemy, że w dniu 13.10.2022 na terenie NZOZ "Ubezpieczalnia" odbędzie się badanie w kierunku <strong>osteoporozy</strong>. Cena 45 zł. Chętnych prosimy o zapisywanie się w rejestracji.
                 </p>
             </article>
         </div>
