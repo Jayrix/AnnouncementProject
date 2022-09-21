@@ -59,7 +59,6 @@ class AnnouncementList extends Component{
                 <Rejestracja/>,
                 <Maseczki/>,
                 <Maseczki_Ukraina/>,
-                <ProgramSzczepien/>,
                 <TestNaPrzeciwciala/>,
                 <Recepty/>,
                 <Profilaktyka40plus/>,
