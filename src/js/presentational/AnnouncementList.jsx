@@ -54,7 +54,6 @@ class AnnouncementList extends Component{
             announcements : [
                 <WstrzymanieSzczepien/>,
                 <Kardiolog/>,
-                <TrzeciaSzczepionka/>,
                 <CzwartaDawka/>,
                 <Rejestracja/>,
                 <Maseczki/>,
@@ -63,7 +62,6 @@ class AnnouncementList extends Component{
                 <Recepty/>,
                 <Profilaktyka40plus/>,
                 <Antiviral/>,
-                <TrzeciaSzczepionka/>,
                 <CzwartaDawka/>,
                 <Maseczki/>,
                 <Maseczki_Ukraina/>,
