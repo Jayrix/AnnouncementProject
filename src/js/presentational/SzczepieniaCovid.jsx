@@ -7,9 +7,7 @@ const SzczepieniaCovid = (props) => {
         <div>
             <article className="covidVaccineContent">
                 <p className="covidVaccineText">
-                    COVID-19 ciągle groźny.
-                    <br/>
-                    W naszej przychodni dalej można się szczepić.
+                    <span>Bezpłatny <strong>program chorób układu krążenia</strong> dla osób od 35 roku życia.</span> O szczegóły proszę pytać w rejestracji. 
                 </p>
             </article>
         </div>

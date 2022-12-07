@@ -5,7 +5,7 @@ import CR from "./CR.jsx";
 import Podomedis from "./Podomedis.jsx";
 import Medea from "./Medea.jsx";
 //import CovidInfo from "./CovidInfo.jsx";
-//import SzczepieniaCovid from "./SzczepieniaCovid.jsx";
+import SzczepieniaCovid from "./SzczepieniaCovid.jsx";
 import Antiviral from "./Antiviral.jsx";
 import DrFiedor from "./DrFiedor.jsx";
 import Profilaktyka40plus from "./Profilaktyka40plus.jsx";
@@ -52,6 +52,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <SzczepieniaCovid/>,
                 <WstrzymanieSzczepien/>,
                 <Kardiolog/>,
                 <CzwartaDawka/>,
@@ -63,6 +64,7 @@ class AnnouncementList extends Component{
                 <Profilaktyka40plus/>,
                 <Antiviral/>,
                 <CzwartaDawka/>,
+                <SzczepieniaCovid/>,
                 <Maseczki/>,
                 <Maseczki_Ukraina/>,
                 <Medea/>,
