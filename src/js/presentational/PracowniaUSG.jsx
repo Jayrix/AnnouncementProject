@@ -10,10 +10,10 @@ const PracowniaUSG = (props) => {
                     <div className="imageContainer">
                         <img src="./dist/img/pracowniaUSG/pracowniaUSG.jpg" alt="pracowniaUSG" title="pracowniaUSG"/>
                     </div>
-                    <strong id="title">PRACOWNIA USG</strong>
+                    <h3 id="title">PRACOWNIA USG</h3>
                 </section>
                 <section className="pracowniaUSGData">
-                    <p className="pracowniaUSGListName">Zakres usług:</p>
+                    <p className="pracowniaUSGListName">Zakres badań:</p>
                     <div className="listsContainer">
                         <ul>
                             <li>Usg jamy brzusznej</li>

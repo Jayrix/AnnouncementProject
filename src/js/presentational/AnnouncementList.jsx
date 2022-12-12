@@ -24,6 +24,7 @@ import GabinetNeurologiczny from "./GabinetNeurologiczny.jsx";
 import GabinetChirurgiiDzieciecej from "./GabinetChirurgiiDzieciecej.jsx";
 //import BozenaHandzlik from "./BozenaHandzlik.jsx";
 import PracowniaUSG from "./PracowniaUSG.jsx";
+import PoradniaKardiologiczna from "./PoradniaKardiologiczna.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
@@ -56,21 +57,21 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
-                <PracowniaUSG/>,
-                <Podomedis/>,
-                <GabinetChirurgiiDzieciecej/>,
+                <PoradniaKardiologiczna/>,
                 <GabinetNeurologiczny/>,
                 <SzczepieniaCovid/>,
                 <WstrzymanieSzczepien/>, 
                 <CzwartaDawka/>,
                 <Rejestracja/>,
                 <Kardiolog/>,
+                <PracowniaUSG/>,
                 <Maseczki/>,
                 <Maseczki_Ukraina/>,
                 <TestNaPrzeciwciala/>,
                 <Recepty/>,
                 <Profilaktyka40plus/>,
                 <Antiviral/>,
+                <GabinetChirurgiiDzieciecej/>,
                 <CzwartaDawka/>,
                 <SzczepieniaCovid/>,
                 <Maseczki/>,

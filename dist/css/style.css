@@ -1707,7 +1707,7 @@ article.pracowniaUSGContent {
     box-shadow: -10px 10px 12px 2px rgba(0,0,0,0.75);
 }
 
-.pracowniaUSGContent strong#title {
+.pracowniaUSGContent h3#title {
     display: inline-block;
     width: 62%;
     font-size: 9rem;
@@ -1753,4 +1753,87 @@ article.pracowniaUSGContent {
     font-size: 4rem;
     margin-top: 4%;
 }
+
+
+/*
+*******************************************************************************
+*/
+
+
+article.poradniaKardiologicznaContent {
+    height: 100vh;
+    width: 100vw;
+}
+
+.poradniaKardiologicznaContent .poradniaKardiologicznaIntro {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+.poradniaKardiologicznaContent .imageContainer {
+    display: inline-block;
+    width: 33%;
+    margin-left: 3%;
+    margin-top: 2%;
+    padding-left: 0%;
+}
+
+.poradniaKardiologicznaContent img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1%;
+    display: block;
+    box-shadow: -10px 10px 12px 2px rgba(0,0,0,0.75);
+}
+
+.poradniaKardiologicznaContent h3#title {
+    display: inline-block;
+    width: 62%;
+    font-size: 8.5rem;
+    color:brown;
+    font-weight: 900;
+    margin-top: 4%;
+    margin-left: 0%;
+    text-align: center;
+}
+
+.poradniaKardiologicznaContent .poradniaKardiologicznaData{
+    font-size: 2.0rem;
+    font-weight: 300;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.poradniaKardiologicznaContent .poradniaKardiologicznaListName{
+    text-align: center;
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+
+.poradniaKardiologicznaContent .listsContainer {
+    margin-top: 2%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+
+.poradniaKardiologicznaContent .listsContainer ul {
+    width:45%;
+    font-size: 4rem;
+    font-weight: bold;
+    list-style-type: disc;
+    margin-left: 5%;
+}
+
+.poradniaKardiologicznaContent .rejestracja {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 5%;
+}
+
 
