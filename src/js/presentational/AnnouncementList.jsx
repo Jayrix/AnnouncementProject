@@ -22,10 +22,12 @@ import CzwartaDawka from './CzwartaDawka.jsx';
 import Kardiolog from "./Kardiolog.jsx";
 import GabinetNeurologiczny from "./GabinetNeurologiczny.jsx";
 import GabinetChirurgiiDzieciecej from "./GabinetChirurgiiDzieciecej.jsx";
+//import BozenaHandzlik from "./BozenaHandzlik.jsx";
+import PracowniaUSG from "./PracowniaUSG.jsx";
 
 
 //zmienne konfiguracyjne sliding w lewo
-const SLIDE_INTERVAL_MS = 4000;
+const SLIDE_INTERVAL_MS = 40000;
 const PSP_SLIDE_INTERVAL_MS = 10000;
 const GEERS_SLIDE_INTERVAL_MS = 12000;
 const FIRST_ANN_REMOVAL_MS = 4000;
@@ -54,6 +56,8 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <PracowniaUSG/>,
+                <Podomedis/>,
                 <GabinetChirurgiiDzieciecej/>,
                 <GabinetNeurologiczny/>,
                 <SzczepieniaCovid/>,
