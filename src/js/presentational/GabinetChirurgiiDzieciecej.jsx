@@ -14,7 +14,7 @@ const GabinetChirurgiiDzieciecej = (props) => {
                     Dr Gabriela Gniadek
                 </p>
                 <p className="chirurgiaDzieciecaText">
-                    Konsultacje i leczenie schorzeń chirurgicznych, wad wrodzonych, wad postawy oraz USG stawów biodrowych. <br/> 
+                    Konsultacje i leczenie schorzeń chirurgicznych, wad wrodzonych oraz USG stawów biodrowych. <br/> 
                     Szczegóły w rejestracji.
                 </p>    
             </article>

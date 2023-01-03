@@ -17,7 +17,7 @@ import WstrzymanieSzczepien from "./WstrzymanieSzczepien.jsx";
 //import ProgramSzczepien from "./ProgramSzczepien.jsx";
 import Maseczki_Ukraina from "./Maseczki_Ukraina.jsx";
 import Rejestracja from "./Rejestracja.jsx";
-import CzwartaDawka from './CzwartaDawka.jsx';
+//import CzwartaDawka from './CzwartaDawka.jsx';
 //import TestyNaGrype from "./TestyNaGrype.jsx";
 import Kardiolog from "./Kardiolog.jsx";
 import GabinetNeurologiczny from "./GabinetNeurologiczny.jsx";
@@ -61,7 +61,6 @@ class AnnouncementList extends Component{
                 <GabinetNeurologiczny/>,
                 <SzczepieniaCovid/>,
                 <WstrzymanieSzczepien/>, 
-                <CzwartaDawka/>,
                 <Rejestracja/>,
                 <Kardiolog/>,
                 <PracowniaUSG/>,
@@ -72,7 +71,6 @@ class AnnouncementList extends Component{
                 <Profilaktyka40plus/>,
                 <Antiviral/>,
                 <GabinetChirurgiiDzieciecej/>,
-                <CzwartaDawka/>,
                 <SzczepieniaCovid/>,
                 <Maseczki/>,
                 <Maseczki_Ukraina/>,
