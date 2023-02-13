@@ -11,7 +11,8 @@ const TrzeciaSzczepionka = (props) => {
                 </div>
                 <strong id="title">BADANIE NA OSTEOPOROZĘ</strong>
                 <p className="TrzeciaSzczepionkaText">
-                    Informujemy, że w dniu 23.11.2022 na terenie NZOZ "Ubezpieczalnia" odbędzie się badanie w kierunku <strong>osteoporozy</strong>. Cena 45 zł. Chętnych prosimy o zapisywanie się w rejestracji.
+                    <span>W dniu 21 marca 2023 roku</span> odbędą sie badania <strong>osteoporozy</strong> w osteobusie na naszym parkingu.
+                    Koszt badania 45 zł. Zapisy w rejestracji.
                 </p>
             </article>
         </div>
