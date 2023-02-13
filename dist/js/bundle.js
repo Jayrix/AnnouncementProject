@@ -24756,7 +24756,7 @@ var TrzeciaSzczepionka = function TrzeciaSzczepionka(props) {
                     null,
                     "W dniu 21 marca 2023 roku"
                 ),
-                " odb\u0119d\u0105 sie badania ",
+                " odb\u0119d\u0105 si\u0119 badania ",
                 _react2.default.createElement(
                     "strong",
                     null,
