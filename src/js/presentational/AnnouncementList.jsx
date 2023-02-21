@@ -60,7 +60,6 @@ class AnnouncementList extends Component{
                 <PoradniaKardiologiczna/>,
                 <GabinetNeurologiczny/>,
                 <SzczepieniaCovid/>,
-                <WstrzymanieSzczepien/>, 
                 <Rejestracja/>,
                 <Maseczki/>,
                 <Maseczki_Ukraina/>,
