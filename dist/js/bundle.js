@@ -502,8 +502,8 @@ var isOnline = __webpack_require__(38);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
-var STATUS_CHECK_MS = 600000;
-var PAGE_RELOAD_MS = 1800000;
+var STATUS_CHECK_MS = 1800000;
+var PAGE_RELOAD_MS = 7200000;
 //const STATUS_CHECK_MS = 2000;
 //const PAGE_RELOAD_MS = 3000;
 
