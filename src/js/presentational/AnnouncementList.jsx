@@ -25,6 +25,7 @@ import GabinetChirurgiiDzieciecej from "./GabinetChirurgiiDzieciecej.jsx";
 //import BozenaHandzlik from "./BozenaHandzlik.jsx";
 import PracowniaUSG from "./PracowniaUSG.jsx";
 import PoradniaKardiologiczna from "./PoradniaKardiologiczna.jsx";
+import HPV from "./HPV.jsx";
 
 //zmienne konfiguracyjne sliding w lewo
 const SLIDE_INTERVAL_MS = 40000;
@@ -56,6 +57,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <HPV/>,
                 <TrzeciaSzczepionka/>,
                 <PoradniaKardiologiczna/>,
                 <GabinetNeurologiczny/>,
@@ -67,6 +69,7 @@ class AnnouncementList extends Component{
                 <PracowniaUSG/>,
                 <Recepty/>,
                 <Profilaktyka40plus/>,
+                <HPV/>,
                 <TrzeciaSzczepionka/>,
                 <Antiviral/>,
                 <GabinetChirurgiiDzieciecej/>,
