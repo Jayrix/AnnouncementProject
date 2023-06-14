@@ -29,7 +29,7 @@ import HPV from "./HPV.jsx";
 import HPV9lat from "./HPV9lat.jsx";
 
 //zmienne konfiguracyjne sliding w lewo
-const SLIDE_INTERVAL_MS = 40000;
+const SLIDE_INTERVAL_MS = 20000;
 const PSP_SLIDE_INTERVAL_MS = 10000;
 const GEERS_SLIDE_INTERVAL_MS = 12000;
 const FIRST_ANN_REMOVAL_MS = 4000;
@@ -71,10 +71,10 @@ class AnnouncementList extends Component{
                 <PracowniaUSG/>,
                 <Recepty/>,
                 <Profilaktyka40plus/>,
-                <HPV9lat/>,
-                <HPV/>,
                 <TrzeciaSzczepionka/>,
                 <Antiviral/>,
+                <HPV9lat/>,
+                <HPV/>,
                 <GabinetChirurgiiDzieciecej/>,
                 <SzczepieniaCovid/>,
                 <Maseczki/>,
