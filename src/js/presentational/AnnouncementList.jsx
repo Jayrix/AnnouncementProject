@@ -12,10 +12,10 @@ import Profilaktyka40plus from "./Profilaktyka40plus.jsx";
 import Recepty from "./Recepty.jsx";
 //import TestNaPrzeciwciala from "./TestNaPrzeciwciala.jsx";
 import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
-import Maseczki from "./Maseczki.jsx";
+//import Maseczki from "./Maseczki.jsx";
 //import WstrzymanieSzczepien from "./WstrzymanieSzczepien.jsx";
 //import ProgramSzczepien from "./ProgramSzczepien.jsx";
-import Maseczki_Ukraina from "./Maseczki_Ukraina.jsx";
+//import Maseczki_Ukraina from "./Maseczki_Ukraina.jsx";
 import Rejestracja from "./Rejestracja.jsx";
 //import CzwartaDawka from './CzwartaDawka.jsx';
 //import TestyNaGrype from "./TestyNaGrype.jsx";
@@ -65,8 +65,6 @@ class AnnouncementList extends Component{
                 <GabinetNeurologiczny/>,
                 <SzczepieniaCovid/>,
                 <Rejestracja/>,
-                <Maseczki/>,
-                <Maseczki_Ukraina/>,
                 <Kardiolog/>,
                 <PracowniaUSG/>,
                 <Recepty/>,
@@ -77,8 +75,6 @@ class AnnouncementList extends Component{
                 <HPV/>,
                 <GabinetChirurgiiDzieciecej/>,
                 <SzczepieniaCovid/>,
-                <Maseczki/>,
-                <Maseczki_Ukraina/>,
                 <Medea/>,
                 <DrFiedor/>,
                 <Podomedis/>,
