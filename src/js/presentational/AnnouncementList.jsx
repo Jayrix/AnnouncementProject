@@ -11,7 +11,7 @@ import DrFiedor from "./DrFiedor.jsx";
 import Profilaktyka40plus from "./Profilaktyka40plus.jsx";
 import Recepty from "./Recepty.jsx";
 //import TestNaPrzeciwciala from "./TestNaPrzeciwciala.jsx";
-import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
+//import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
 //import Maseczki from "./Maseczki.jsx";
 //import WstrzymanieSzczepien from "./WstrzymanieSzczepien.jsx";
 //import ProgramSzczepien from "./ProgramSzczepien.jsx";
@@ -60,7 +60,6 @@ class AnnouncementList extends Component{
             announcements : [
                 <HPV9lat/>,
                 <HPV/>,
-                <TrzeciaSzczepionka/>,
                 <PoradniaKardiologiczna/>,
                 <GabinetNeurologiczny/>,
                 <SzczepieniaCovid/>,
@@ -69,7 +68,6 @@ class AnnouncementList extends Component{
                 <PracowniaUSG/>,
                 <Recepty/>,
                 <Profilaktyka40plus/>,
-                <TrzeciaSzczepionka/>,
                 <Antiviral/>,
                 <HPV9lat/>,
                 <HPV/>,
