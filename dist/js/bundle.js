@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(37);
+var isOnline = __webpack_require__(39);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23764,11 +23764,11 @@ var _HPV9lat = __webpack_require__(36);
 
 var _HPV9lat2 = _interopRequireDefault(_HPV9lat);
 
-var _SzczepieniaRefundacja = __webpack_require__(41);
+var _SzczepieniaRefundacja = __webpack_require__(37);
 
 var _SzczepieniaRefundacja2 = _interopRequireDefault(_SzczepieniaRefundacja);
 
-var _SzczepieniaRefundacja3 = __webpack_require__(42);
+var _SzczepieniaRefundacja3 = __webpack_require__(38);
 
 var _SzczepieniaRefundacja4 = _interopRequireDefault(_SzczepieniaRefundacja3);
 
@@ -25161,7 +25161,79 @@ exports.default = HPV9lat;
 "use strict";
 
 
-const publicIp = __webpack_require__(38);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SzczepieniaRefundacja1 = function SzczepieniaRefundacja1(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "SzczepieniaRefundacja1Content" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/SzczepieniaRefundacja/SzczepieniaRefundacja1.png", alt: "SzczepieniaRefundacja1", title: "SzczepieniaRefundacja1" })
+            )
+        )
+    );
+};
+
+exports.default = SzczepieniaRefundacja1;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SzczepieniaRefundacja2 = function SzczepieniaRefundacja2(props) {
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "article",
+            { className: "SzczepieniaRefundacja2Content" },
+            _react2.default.createElement(
+                "div",
+                { className: "imageContainer" },
+                _react2.default.createElement("img", { src: "./dist/img/SzczepieniaRefundacja/SzczepieniaRefundacja2.jpg", alt: "SzczepieniaRefundacja2", title: "SzczepieniaRefundacja2" })
+            )
+        )
+    );
+};
+
+exports.default = SzczepieniaRefundacja2;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const publicIp = __webpack_require__(40);
 
 const defaults = {
 	timeout: 5000,
@@ -25175,12 +25247,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(39);
+const isIp = __webpack_require__(41);
 
 const defaults = {
 	timeout: 5000
@@ -25226,12 +25298,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(40);
+const ipRegex = __webpack_require__(42);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25239,7 +25311,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25268,78 +25340,6 @@ const ip = module.exports = opts => opts && opts.exact ?
 ip.v4 = opts => opts && opts.exact ? new RegExp(`^${v4}$`) : new RegExp(v4, 'g');
 ip.v6 = opts => opts && opts.exact ? new RegExp(`^${v6}$`) : new RegExp(v6, 'g');
 
-
-/***/ }),
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SzczepieniaRefundacja1 = function SzczepieniaRefundacja1(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "SzczepieniaRefundacja1Content" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/SzczepieniaRefundacja/SzczepieniaRefundacja1.png", alt: "SzczepieniaRefundacja1", title: "SzczepieniaRefundacja1" })
-            )
-        )
-    );
-};
-
-exports.default = SzczepieniaRefundacja1;
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SzczepieniaRefundacja2 = function SzczepieniaRefundacja2(props) {
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-            "article",
-            { className: "SzczepieniaRefundacja2Content" },
-            _react2.default.createElement(
-                "div",
-                { className: "imageContainer" },
-                _react2.default.createElement("img", { src: "./dist/img/SzczepieniaRefundacja/SzczepieniaRefundacja2.jpg", alt: "SzczepieniaRefundacja2", title: "SzczepieniaRefundacja2" })
-            )
-        )
-    );
-};
-
-exports.default = SzczepieniaRefundacja2;
 
 /***/ })
 /******/ ]);
