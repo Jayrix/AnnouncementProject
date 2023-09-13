@@ -27,6 +27,8 @@ import PracowniaUSG from "./PracowniaUSG.jsx";
 import PoradniaKardiologiczna from "./PoradniaKardiologiczna.jsx";
 import HPV from "./HPV.jsx";
 import HPV9lat from "./HPV9lat.jsx";
+import SzczepieniaRefundacja1 from "./SzczepieniaRefundacja1.jsx";
+import SzczepieniaRefundacja2 from "./SzczepieniaRefundacja2.jsx";
 
 //zmienne konfiguracyjne sliding w lewo
 const SLIDE_INTERVAL_MS = 20000;
@@ -76,6 +78,8 @@ class AnnouncementList extends Component{
                 <Medea/>,
                 <DrFiedor/>,
                 <Podomedis/>,
+                <SzczepieniaRefundacja1/>,
+                <SzczepieniaRefundacja2/>,
                 <CR />,
                 ...geers_array,
                 ...psp_array
