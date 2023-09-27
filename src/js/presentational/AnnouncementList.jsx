@@ -29,6 +29,7 @@ import HPV from "./HPV.jsx";
 import HPV9lat from "./HPV9lat.jsx";
 import SzczepieniaRefundacja1 from "./SzczepieniaRefundacja1.jsx";
 import SzczepieniaRefundacja2 from "./SzczepieniaRefundacja2.jsx";
+import Osteoporoza from "./Osteoporoza.jsx";
 
 //zmienne konfiguracyjne sliding w lewo
 const SLIDE_INTERVAL_MS = 20000;
@@ -60,6 +61,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <Osteoporoza/>,
                 <HPV9lat/>,
                 <HPV/>,
                 <PoradniaKardiologiczna/>,
@@ -73,6 +75,7 @@ class AnnouncementList extends Component{
                 <Antiviral/>,
                 <HPV9lat/>,
                 <HPV/>,
+                <Osteoporoza/>,
                 <GabinetChirurgiiDzieciecej/>,
                 <SzczepieniaCovid/>,
                 <Medea/>,
