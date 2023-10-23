@@ -29,7 +29,7 @@ import PoradniaKardiologiczna from "./PoradniaKardiologiczna.jsx";
 //import HPV9lat from "./HPV9lat.jsx";
 import SzczepieniaRefundacja1 from "./SzczepieniaRefundacja1.jsx";
 import SzczepieniaRefundacja2 from "./SzczepieniaRefundacja2.jsx";
-import Osteoporoza from "./Osteoporoza.jsx";
+//import Osteoporoza from "./Osteoporoza.jsx";
 import ZleceniaRecept from "./ZleceniaRecept.jsx";
 
 //zmienne konfiguracyjne sliding w lewo
@@ -63,7 +63,6 @@ class AnnouncementList extends Component{
         this.state = {
             announcements : [
                 <ZleceniaRecept/>,
-                <Osteoporoza/>,
                 <PoradniaKardiologiczna/>,
                 <GabinetNeurologiczny/>,
                 <SzczepieniaCovid/>,
@@ -73,7 +72,6 @@ class AnnouncementList extends Component{
                 <Recepty/>,
                 <Profilaktyka40plus/>,
                 <Antiviral/>,
-                <Osteoporoza/>,
                 <ZleceniaRecept/>,
                 <GabinetChirurgiiDzieciecej/>,
                 <SzczepieniaCovid/>,
