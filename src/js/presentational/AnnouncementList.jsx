@@ -31,6 +31,7 @@ import SzczepieniaRefundacja1 from "./SzczepieniaRefundacja1.jsx";
 import SzczepieniaRefundacja2 from "./SzczepieniaRefundacja2.jsx";
 //import Osteoporoza from "./Osteoporoza.jsx";
 import ZleceniaRecept from "./ZleceniaRecept.jsx";
+import DrPerchala from "./DrPerchala.jsx";
 
 //zmienne konfiguracyjne sliding w lewo
 const SLIDE_INTERVAL_MS = 20000;
@@ -62,6 +63,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <DrPerchala/>,
                 <ZleceniaRecept/>,
                 <PoradniaKardiologiczna/>,
                 <GabinetNeurologiczny/>,
@@ -73,6 +75,7 @@ class AnnouncementList extends Component{
                 <Profilaktyka40plus/>,
                 <Antiviral/>,
                 <ZleceniaRecept/>,
+                <DrPerchala/>,
                 <GabinetChirurgiiDzieciecej/>,
                 <SzczepieniaCovid/>,
                 <Medea/>,

@@ -6,10 +6,10 @@ const DrFiedor = (props) => {
         <div>
             <article className="drFiedorContent">
                 <p>
-                    INFORMACJA DLA PACJENTÓW PANI DR FIEDOR
+                    INFORMACJA DLA PACJENTÓW PANI DR. FIEDOR
                 </p>
                 <p>
-                    W związku z przejściem Pani Dr Fiedor na emeryturę, pacjenci proszeni są o przepisywanie deklaracji do innych lekarzy.
+                    W związku z przejściem Pani Dr. Fiedor na emeryturę, pacjenci proszeni są o przepisywanie deklaracji do innych lekarzy.
                 </p>
             </article>
         </div>
