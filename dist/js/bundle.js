@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(39);
+var isOnline = __webpack_require__(38);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -25173,14 +25173,13 @@ var ZleceniaRecept = function ZleceniaRecept(props) {
 exports.default = ZleceniaRecept;
 
 /***/ }),
-/* 38 */,
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const publicIp = __webpack_require__(40);
+const publicIp = __webpack_require__(39);
 
 const defaults = {
 	timeout: 5000,
@@ -25194,12 +25193,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(41);
+const isIp = __webpack_require__(40);
 
 const defaults = {
 	timeout: 5000
@@ -25245,12 +25244,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(42);
+const ipRegex = __webpack_require__(41);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25258,7 +25257,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
