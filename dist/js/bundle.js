@@ -498,7 +498,7 @@ var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isOnline = __webpack_require__(38);
+var isOnline = __webpack_require__(36);
 
 //zmienne konfiguracyjne odswiezania
 var GET_URL = "https://jayrix.github.io/Announcement/";
@@ -23756,7 +23756,7 @@ var _PoradniaKardiologiczna = __webpack_require__(34);
 
 var _PoradniaKardiologiczna2 = _interopRequireDefault(_PoradniaKardiologiczna);
 
-var _ZleceniaRecept = __webpack_require__(37);
+var _ZleceniaRecept = __webpack_require__(35);
 
 var _ZleceniaRecept2 = _interopRequireDefault(_ZleceniaRecept);
 
@@ -25054,9 +25054,7 @@ var PoradniaKardiologiczna = function PoradniaKardiologiczna(props) {
 exports.default = PoradniaKardiologiczna;
 
 /***/ }),
-/* 35 */,
-/* 36 */,
-/* 37 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25097,13 +25095,13 @@ var ZleceniaRecept = function ZleceniaRecept(props) {
 exports.default = ZleceniaRecept;
 
 /***/ }),
-/* 38 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const publicIp = __webpack_require__(39);
+const publicIp = __webpack_require__(37);
 
 const defaults = {
 	timeout: 5000,
@@ -25117,12 +25115,12 @@ module.exports = options => {
 
 
 /***/ }),
-/* 39 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const isIp = __webpack_require__(40);
+const isIp = __webpack_require__(38);
 
 const defaults = {
 	timeout: 5000
@@ -25168,12 +25166,12 @@ module.exports.v6 = opts => {
 
 
 /***/ }),
-/* 40 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-const ipRegex = __webpack_require__(41);
+const ipRegex = __webpack_require__(39);
 
 const isIp = module.exports = x => ipRegex({exact: true}).test(x);
 isIp.v4 = x => ipRegex.v4({exact: true}).test(x);
@@ -25181,7 +25179,7 @@ isIp.v6 = x => ipRegex.v6({exact: true}).test(x);
 
 
 /***/ }),
-/* 41 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
