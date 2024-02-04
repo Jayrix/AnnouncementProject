@@ -27,14 +27,15 @@ import PracowniaUSG from "./PracowniaUSG.jsx";
 import PoradniaKardiologiczna from "./PoradniaKardiologiczna.jsx";
 //import HPV from "./HPV.jsx";
 //import HPV9lat from "./HPV9lat.jsx";
-import SzczepieniaRefundacja1 from "./SzczepieniaRefundacja1.jsx";
-import SzczepieniaRefundacja2 from "./SzczepieniaRefundacja2.jsx";
+//import SzczepieniaRefundacja1 from "./SzczepieniaRefundacja1.jsx";
+//import SzczepieniaRefundacja2 from "./SzczepieniaRefundacja2.jsx";
 //import Osteoporoza from "./Osteoporoza.jsx";
 import ZleceniaRecept from "./ZleceniaRecept.jsx";
 //import DrPerchala from "./DrPerchala.jsx";
 
 //zmienne konfiguracyjne sliding w lewo
 const SLIDE_INTERVAL_MS = 20000;
+//const SLIDE_INTERVAL_MS = 5000;
 const PSP_SLIDE_INTERVAL_MS = 10000;
 const GEERS_SLIDE_INTERVAL_MS = 12000;
 const FIRST_ANN_REMOVAL_MS = 4000;
@@ -79,8 +80,6 @@ class AnnouncementList extends Component{
                 <Medea/>,
                 <DrFiedor/>,
                 <Podomedis/>,
-                <SzczepieniaRefundacja1/>,
-                <SzczepieniaRefundacja2/>,
                 <CR />,
                 ...geers_array,
                 ...psp_array
