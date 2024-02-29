@@ -25,7 +25,7 @@ import GabinetChirurgiiDzieciecej from "./GabinetChirurgiiDzieciecej.jsx";
 //import BozenaHandzlik from "./BozenaHandzlik.jsx";
 import PracowniaUSG from "./PracowniaUSG.jsx";
 import PoradniaKardiologiczna from "./PoradniaKardiologiczna.jsx";
-//import HPV from "./HPV.jsx";
+import HPV from "./HPV.jsx";
 //import HPV9lat from "./HPV9lat.jsx";
 //import SzczepieniaRefundacja1 from "./SzczepieniaRefundacja1.jsx";
 //import SzczepieniaRefundacja2 from "./SzczepieniaRefundacja2.jsx";
@@ -64,6 +64,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <HPV/>,
                 <ZleceniaRecept/>,
                 <PoradniaKardiologiczna/>,
                 <GabinetNeurologiczny/>,

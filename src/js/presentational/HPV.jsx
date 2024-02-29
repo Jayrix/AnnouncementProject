@@ -9,10 +9,10 @@ const HPV = (props) => {
                 <div className="imageContainer">
                     <img src="./dist/img/HPV/HPV.jpg" alt="HPV" title="HPV"/>
                 </div>
-                <strong id="title">Uwaga! Ważne ogłoszenie.</strong>
+                <strong id="title">SZCZEPIENIA PRZECIW HPV</strong>
                 <p className="HPVText">
-                    Informujemy, że młodzież urodzona w roku 2010 i 2011 od 1.06.2023 uczestniczy w <strong> bezpłatnym programie szczepień przeciwko wirusowi brodawczaka ludzkiego (HPV). </strong>
-                    Niestety, na tę chwilę ilość szczepionek, które otrzymaliśmy jest ograniczona do ok. 20% populacji i obowiązuje kolejność zgłoszeń.  Zapisy w rejestracji.
+                    Informujemy, że młodzież urodzona w roku 2011, 2012 i 2013 (dziewczynki i chłopcy) uczestniczy w <strong>bezpłatnym
+                    programie szczepień przeciwko wirusowi brodawczaka ludzkiego (HPV)</strong> - szczepionki Gardasil. Zapisy w rejestracji.
                 </p>
             </article>
         </div>
