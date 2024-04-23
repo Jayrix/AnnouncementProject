@@ -32,6 +32,7 @@ import HPV from "./HPV.jsx";
 //import Osteoporoza from "./Osteoporoza.jsx";
 import ZleceniaRecept from "./ZleceniaRecept.jsx";
 //import DrPerchala from "./DrPerchala.jsx";
+import Ktomalek from "./Ktomalek.jsx";
 
 //zmienne konfiguracyjne sliding w lewo
 const SLIDE_INTERVAL_MS = 20000;
@@ -64,6 +65,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <Ktomalek/>,
                 <HPV/>,
                 <ZleceniaRecept/>,
                 <PoradniaKardiologiczna/>,
