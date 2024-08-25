@@ -11,7 +11,7 @@ import DrFiedor from "./DrFiedor.jsx";
 import Profilaktyka40plus from "./Profilaktyka40plus.jsx";
 import Recepty from "./Recepty.jsx";
 //import TestNaPrzeciwciala from "./TestNaPrzeciwciala.jsx";
-//import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
+import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
 //import Maseczki from "./Maseczki.jsx";
 //import WstrzymanieSzczepien from "./WstrzymanieSzczepien.jsx";
 //import ProgramSzczepien from "./ProgramSzczepien.jsx";
@@ -65,6 +65,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <TrzeciaSzczepionka/>,
                 <Ktomalek/>,
                 <HPV/>,
                 <ZleceniaRecept/>,
@@ -75,6 +76,7 @@ class AnnouncementList extends Component{
                 <Kardiolog/>,
                 <PracowniaUSG/>,
                 <Recepty/>,
+                <TrzeciaSzczepionka/>,
                 <Profilaktyka40plus/>,
                 <Antiviral/>,
                 <ZleceniaRecept/>,
