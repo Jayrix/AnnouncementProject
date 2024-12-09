@@ -5,10 +5,15 @@ const isOnline = require('is-online');
 
 //zmienne konfiguracyjne odswiezania
 const GET_URL = "https://jayrix.github.io/Announcement/";
-const STATUS_CHECK_MS = 1800000;
-const PAGE_RELOAD_MS = 7200000;
-//const STATUS_CHECK_MS = 2000;
-//const PAGE_RELOAD_MS = 3000;
+
+
+//w obecnej konfiguracji reloadThePage odpala sie dopiero w nocy, 17 godzin po restarcie systemu
+const STATUS_CHECK_MS = 900000;
+const PAGE_RELOAD_MS = 61200000;
+//const STATUS_CHECK_MS = 1800000;
+//const PAGE_RELOAD_MS = 7200000;
+// const STATUS_CHECK_MS = 2000;
+// const PAGE_RELOAD_MS = 3000;
 
 //funkcje odpowiedzialne za odswiezanie
 function makeGetRequest(url){

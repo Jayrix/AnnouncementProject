@@ -18,7 +18,7 @@ const Medea = props => {
                     <div className="borderHider"></div>
                     <div className="workingHours">
                         <h3>Godziny otwarcia</h3>
-                        <p>Pon.-Pt. 7.<sup>30</sup>-19.<sup>30</sup></p>
+                        <p>Pon.-Pt. 7.<sup>30</sup>-18.<sup>00</sup></p>
                         <p>Sob. nieczynne</p>
                     </div>
                 </div>
