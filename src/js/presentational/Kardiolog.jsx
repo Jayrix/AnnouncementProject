@@ -11,7 +11,7 @@ const Kardiolog = (props) => {
                 </div>
                 <p id="title">GABINET KARDIOLOGICZNY</p>
                 <p className="KardiologText">
-                    Kardiolog w NZOZ "Ubezpieczalnia" - również wizyty prywatne - Pakiet (wizyta + USG) w cenie 300 zł.
+                    Kardiolog w NZOZ "Ubezpieczalnia" - również wizyty prywatne. Szczegóły w rejestracji.
                 </p>
             </article>
         </div>
