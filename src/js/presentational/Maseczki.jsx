@@ -1,5 +1,26 @@
 import React from 'react';
 
+
+const Maseczki = (props) => {
+    
+    return(
+        
+        <div>
+            <article className="maseczkiContent">
+                <div className="imageContainer">
+                    <img src="./dist/img/maseczki/maska.jpg" alt="maska" title="maska"/>
+                </div>
+                <strong id="title">UWAGA!</strong>
+                <p className="maseczkiText">
+                    Bardzo prosimy osoby z infekcją o noszenie maseczek.
+                </p>
+            </article>
+        </div>
+        
+    )
+}
+
+/*
 const Maseczki = (props) => {
     
     return(
@@ -18,5 +39,5 @@ const Maseczki = (props) => {
         
     )
 }
-
+*/
 export default Maseczki;
