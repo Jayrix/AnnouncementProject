@@ -9,7 +9,7 @@ const Rejestracja = (props) => {
                     SZANOWNI PACJENCI!
                 </h1>
                 <p>
-                    Przed podejściem do gabinetu lekarskiego, prosimy o udanie się do rejestracji na pierwszym piętrze.
+                    Przed podejściem do gabinetu lekarskiego, prosimy o udanie się do rejestracji na pierwszym piętrze. 
                 </p>
             </article>
         </div>
