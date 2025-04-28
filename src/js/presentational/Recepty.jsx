@@ -14,7 +14,7 @@ const Recepty = (props) => {
                     Szanowni Pacjenci,
                     <br/>
                     Informujemy, że recepty na STAŁE leki można zamawiać nie tylko przez telefon i osobiście, ale również przez e-mail:
-                    <strong> rejestracja.ubezpieczalnia@gmail.com </strong>
+                    <strong> rejestracja@ubezpieczalniacieszyn.com </strong>
                 </p>
             </article>
         </div>
