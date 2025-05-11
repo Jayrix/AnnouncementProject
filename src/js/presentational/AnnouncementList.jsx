@@ -8,7 +8,7 @@ import Medea from "./Medea.jsx";
 import SzczepieniaCovid from "./SzczepieniaCovid.jsx";
 import Antiviral from "./Antiviral.jsx";
 import DrFiedor from "./DrFiedor.jsx";
-import Profilaktyka40plus from "./Profilaktyka40plus.jsx";
+//import Profilaktyka40plus from "./Profilaktyka40plus.jsx";
 import Recepty from "./Recepty.jsx";
 //import TestNaPrzeciwciala from "./TestNaPrzeciwciala.jsx";
 //import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
@@ -84,7 +84,6 @@ class AnnouncementList extends Component{
                 <Kardiolog/>,
                 <PracowniaUSG/>,
                 <Recepty/>,
-                <Profilaktyka40plus/>,
                 <DaneRejestracja/>,
                 <Antiviral/>,
                 <AktualizacjaInfo/>,
