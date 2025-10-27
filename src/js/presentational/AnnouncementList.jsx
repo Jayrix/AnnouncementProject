@@ -11,7 +11,7 @@ import DrFiedor from "./DrFiedor.jsx";
 //import Profilaktyka40plus from "./Profilaktyka40plus.jsx";
 import Recepty from "./Recepty.jsx";
 //import TestNaPrzeciwciala from "./TestNaPrzeciwciala.jsx";
-//import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
+import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
 import Maseczki from "./Maseczki.jsx";
 //import WstrzymanieSzczepien from "./WstrzymanieSzczepien.jsx";
 //import ProgramSzczepien from "./ProgramSzczepien.jsx";
@@ -40,7 +40,7 @@ import DaneRejestracja from "./DaneRejestracja.jsx";
 
 //zmienne konfiguracyjne sliding w lewo
 const SLIDE_INTERVAL_MS = 20000;
-//const SLIDE_INTERVAL_MS = 5000;
+//const SLIDE_INTERVAL_MS = 4000;
 const PSP_SLIDE_INTERVAL_MS = 10000;
 const GEERS_SLIDE_INTERVAL_MS = 12000;
 const FIRST_ANN_REMOVAL_MS = 4000;
@@ -69,6 +69,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <TrzeciaSzczepionka/>,
                 <DaneRejestracja/>,
                 <Maseczki/>,
                 <AktualizacjaInfo/>,
@@ -84,6 +85,7 @@ class AnnouncementList extends Component{
                 <Kardiolog/>,
                 <PracowniaUSG/>,
                 <Recepty/>,
+                <TrzeciaSzczepionka/>,
                 <DaneRejestracja/>,
                 <Antiviral/>,
                 <AktualizacjaInfo/>,
