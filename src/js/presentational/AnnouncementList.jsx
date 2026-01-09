@@ -33,7 +33,7 @@ import HPV from "./HPV.jsx";
 import ZleceniaRecept from "./ZleceniaRecept.jsx";
 //import DrPerchala from "./DrPerchala.jsx";
 import Ktomalek from "./Ktomalek.jsx";
-import PoradniaDietetyczna from "./PoradniaDietetyczna.jsx";
+//import PoradniaDietetyczna from "./PoradniaDietetyczna.jsx";
 import SzczepionkiGrypa from "./SzczepionkiGrypa.jsx";
 import AktualizacjaInfo from "./AktualizacjaInfo.jsx";
 import DaneRejestracja from "./DaneRejestracja.jsx";
@@ -73,7 +73,6 @@ class AnnouncementList extends Component{
                 <Maseczki/>,
                 <AktualizacjaInfo/>,
                 <SzczepionkiGrypa/>,
-                <PoradniaDietetyczna/>,
                 <Ktomalek/>,
                 <HPV/>,
                 <ZleceniaRecept/>,
