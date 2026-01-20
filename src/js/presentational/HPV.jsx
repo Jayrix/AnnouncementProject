@@ -11,7 +11,7 @@ const HPV = (props) => {
                 </div>
                 <strong id="title">SZCZEPIENIA PRZECIW HPV</strong>
                 <p className="HPVText">
-                    Informujemy, że młodzież urodzona w roku 2011, 2012 i 2013 (dziewczynki i chłopcy) uczestniczy w <strong>bezpłatnym
+                    Informujemy, że dzieci w wieku 9-14 lat (dziewczynki i chłopcy) uczestniczą w <strong>bezpłatnym
                     programie szczepień przeciwko wirusowi brodawczaka ludzkiego (HPV)</strong> - szczepionki Gardasil. Zapisy w rejestracji.
                 </p>
             </article>
