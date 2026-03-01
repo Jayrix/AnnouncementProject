@@ -69,7 +69,6 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
-                <TrzeciaSzczepionka/>,
                 <DaneRejestracja/>,
                 <Maseczki/>,
                 <AktualizacjaInfo/>,
@@ -85,7 +84,6 @@ class AnnouncementList extends Component{
                 <PracowniaUSG/>,
                 <Recepty/>,
                 <DaneRejestracja/>,
-                <TrzeciaSzczepionka/>,
                 <Antiviral/>,
                 <AktualizacjaInfo/>,
                 <ZleceniaRecept/>,
