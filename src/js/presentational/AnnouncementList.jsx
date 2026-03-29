@@ -11,7 +11,7 @@ import DrFiedor from "./DrFiedor.jsx";
 //import Profilaktyka40plus from "./Profilaktyka40plus.jsx";
 import Recepty from "./Recepty.jsx";
 //import TestNaPrzeciwciala from "./TestNaPrzeciwciala.jsx";
-import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
+//import TrzeciaSzczepionka from "./TrzeciaSzczepionka.jsx";
 import Maseczki from "./Maseczki.jsx";
 //import WstrzymanieSzczepien from "./WstrzymanieSzczepien.jsx";
 //import ProgramSzczepien from "./ProgramSzczepien.jsx";
@@ -34,7 +34,7 @@ import ZleceniaRecept from "./ZleceniaRecept.jsx";
 //import DrPerchala from "./DrPerchala.jsx";
 import Ktomalek from "./Ktomalek.jsx";
 //import PoradniaDietetyczna from "./PoradniaDietetyczna.jsx";
-import SzczepionkiGrypa from "./SzczepionkiGrypa.jsx";
+//import SzczepionkiGrypa from "./SzczepionkiGrypa.jsx";
 import AktualizacjaInfo from "./AktualizacjaInfo.jsx";
 import DaneRejestracja from "./DaneRejestracja.jsx";
 
@@ -72,7 +72,6 @@ class AnnouncementList extends Component{
                 <DaneRejestracja/>,
                 <Maseczki/>,
                 <AktualizacjaInfo/>,
-                <SzczepionkiGrypa/>,
                 <Ktomalek/>,
                 <HPV/>,
                 <ZleceniaRecept/>,
