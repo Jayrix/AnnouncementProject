@@ -11,8 +11,8 @@ const TrzeciaSzczepionka = (props) => {
                 </div>
                 <strong id="title">BADANIE NA OSTEOPOROZĘ</strong>
                 <p className="TrzeciaSzczepionkaText">
-                    <span>W dniu 09.02.2026</span> odbędą się badania <strong>osteoporozy</strong> w osteobusie na naszym parkingu.
-                    Zapisy w rejestracji na I piętrze.
+                    <span>W dniu 09.06.2026</span> odbędą się badania <strong>osteoporozy</strong> w osteobusie na naszym parkingu w godz. 9:00-14:00.
+                    Cena badania 60 zł. Zapisy w rejestracji na I piętrze.
                 </p>
             </article>
         </div>
