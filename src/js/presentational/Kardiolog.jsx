@@ -11,7 +11,7 @@ const Kardiolog = (props) => {
                 </div>
                 <p id="title">GABINET KARDIOLOGICZNY</p>
                 <p className="KardiologText">
-                    Kardiolog w NZOZ "Ubezpieczalnia" - również wizyty prywatne. Szczegóły w rejestracji.
+                    Kardiolog w NZOZ "Ubezpieczalnia" - również wizyty prywatne <span>(w tym dla dzieci od 15 roku życia)</span>. Szczegóły w rejestracji.
                 </p>
             </article>
         </div>
