@@ -38,6 +38,7 @@ import Ktomalek from "./Ktomalek.jsx";
 import AktualizacjaInfo from "./AktualizacjaInfo.jsx";
 import DaneRejestracja from "./DaneRejestracja.jsx";
 import CHUK from "./CHUK.jsx";
+import Profilaktyka from "./Profilaktyka.jsx";
 
 //zmienne konfiguracyjne sliding w lewo
 const SLIDE_INTERVAL_MS = 20000;
@@ -70,6 +71,7 @@ class AnnouncementList extends Component{
 
         this.state = {
             announcements : [
+                <Profilaktyka/>,
                 <CHUK/>,
                 <TrzeciaSzczepionka/>,
                 <DaneRejestracja/>,
@@ -85,6 +87,7 @@ class AnnouncementList extends Component{
                 <Kardiolog/>,
                 <PracowniaUSG/>,
                 <Recepty/>,
+                <Profilaktyka/>,
                 <TrzeciaSzczepionka/>,
                 <DaneRejestracja/>,
                 <Antiviral/>,
