@@ -8,7 +8,7 @@ const Recepty = (props) => {
             <article className="ReceptyContent">
                 <strong id="title">RECEPTY - informacja</strong>
                 <div className="imageContainer">
-                    <img src="./dist/img/recepty/recepta.jpg" alt="Obraz przedstawiający receptę" title="Recepta"/>
+                    <img src="./dist/img/recepty/recepta.jpg" alt="Obraz przedstawiający receptę" />
                 </div>
                 <p className="ReceptyText">
                     Szanowni Pacjenci,

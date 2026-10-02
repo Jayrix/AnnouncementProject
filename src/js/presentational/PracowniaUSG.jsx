@@ -8,7 +8,7 @@ const PracowniaUSG = (props) => {
             <article className="pracowniaUSGContent">
                 <section className="pracowniaUSGIntro">
                     <div className="imageContainer">
-                        <img src="./dist/img/pracowniaUSG/pracowniaUSG.jpg" alt="pracowniaUSG" title="pracowniaUSG"/>
+                        <img src="./dist/img/pracowniaUSG/pracowniaUSG.jpg" alt="pracowniaUSG" />
                     </div>
                     <h3 id="title">PRACOWNIA USG</h3>
                 </section>

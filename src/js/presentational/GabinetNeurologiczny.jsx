@@ -7,7 +7,7 @@ const GabinetNeurologiczny = (props) => {
         <div>
             <article className="gabinetNeurologicznyContent">
                 <div className="imageContainer">
-                    <img src="./dist/img/gabinetNeurologiczny/neurologia.png" alt="neurologia" title="neurologia"/>
+                    <img src="./dist/img/gabinetNeurologiczny/neurologia.png" alt="neurologia" />
                 </div>
                 <h3 id="title">GABINET NEUROLOGICZNY</h3>
                 <p className="gabinetNeurologicznyDane">

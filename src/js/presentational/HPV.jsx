@@ -7,7 +7,7 @@ const HPV = (props) => {
         <div>
             <article className="HPVContent">
                 <div className="imageContainer">
-                    <img src="./dist/img/HPV/HPV.jpg" alt="HPV" title="HPV"/>
+                    <img src="./dist/img/HPV/HPV.jpg" alt="HPV" />
                 </div>
                 <strong id="title">SZCZEPIENIA PRZECIW HPV</strong>
                 <p className="HPVText">

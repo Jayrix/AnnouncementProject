@@ -7,7 +7,7 @@ const Kardiolog = (props) => {
         <div>
             <article className="KardiologContent">
                 <div className="imageContainer">
-                    <img src="./dist/img/Kardiolog/kardiologia.jpg" alt="kardiologia" title="kardiologia"/>
+                    <img src="./dist/img/Kardiolog/kardiologia.jpg" alt="kardiologia" />
                 </div>
                 <p id="title">GABINET KARDIOLOGICZNY</p>
                 <p className="KardiologText">

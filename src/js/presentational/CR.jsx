@@ -13,7 +13,7 @@ const CR = props => {
                     <div className="CRinformation">
                         <article>
                             <div className="logoContainer">
-                                <img id="logo" src="./dist/img/cr/logo.png" alt="Logo" title="Logo"/>
+                                <img id="logo" src="./dist/img/cr/logo.png" alt="Logo" />
                             </div>
                             <div className="CRtext">
                                 <h1>CENTRUM REHABILITACJI</h1>

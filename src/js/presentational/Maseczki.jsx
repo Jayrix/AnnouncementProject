@@ -8,7 +8,7 @@ const Maseczki = (props) => {
         <div>
             <article className="maseczkiContent">
                 <div className="imageContainer">
-                    <img src="./dist/img/maseczki/maska.jpg" alt="maska" title="maska"/>
+                    <img src="./dist/img/maseczki/maska.jpg" alt="maska" />
                 </div>
                 <strong id="title">UWAGA!</strong>
                 <p className="maseczkiText">

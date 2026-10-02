@@ -7,7 +7,7 @@ const TrzeciaSzczepionka = (props) => {
         <div>
             <article className="TrzeciaSzczepionkaContent">
                 <div className="imageContainer">
-                    <img src="./dist/img/trzeciaSzczepionka/osteoporoza.jpg" alt="osteoporoza" title="osteoporoza"/>
+                    <img src="./dist/img/trzeciaSzczepionka/osteoporoza.jpg" alt="osteoporoza" />
                 </div>
                 <strong id="title">BADANIE NA OSTEOPOROZĘ</strong>
                 <p className="TrzeciaSzczepionkaText">

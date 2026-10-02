@@ -7,7 +7,7 @@ const CHUK = (props) => {
         <div>
             <article className="CHUKContent">
                 <div className="imageContainer">
-                    <img src="./dist/img/CHUK/CHUK_256.png" alt="CHUK" title="CHUK"/>
+                    <img src="./dist/img/CHUK/CHUK_256.png" alt="CHUK"/>
                 </div> 
             </article>
         </div>

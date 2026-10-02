@@ -7,7 +7,7 @@ const Antiviral = (props) => {
         <div>
             <article className="antiviralDrugsContent">
                 <div className="imageContainer">
-                    <img src="./dist/img/antiviral/antiviral.jpg" alt="Leki_przeciwwirusowe" title="Leki_przeciwwirusowe"/>
+                    <img src="./dist/img/antiviral/antiviral.jpg" alt="Leki_przeciwwirusowe" />
                 </div>
                 <strong id="title">LEKI ANTYWIRUSOWE</strong>
                 <p className="antiviralDrugsText">

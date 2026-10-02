@@ -7,7 +7,7 @@ const Profilaktyka = (props) => {
         <div>
             <article className="ProfilaktykaContent">
                 <div className="imageContainer">
-                    <img src="./dist/img/profilaktyka/profilaktyka256.png" alt="profilaktyka" title="profilaktyka"/>
+                    <img src="./dist/img/profilaktyka/profilaktyka256.png" alt="profilaktyka"/>
                 </div> 
             </article>
         </div>

@@ -8,7 +8,7 @@ const PoradniaKardiologiczna = (props) => {
             <article className="poradniaKardiologicznaContent">
                 <section className="poradniaKardiologicznaIntro">
                     <div className="imageContainer">
-                        <img src="./dist/img/poradniaKardiologiczna/poradniaKardiologiczna.jpg" alt="poradniaKardiologiczna" title="poradniaKardiologiczna"/>
+                        <img src="./dist/img/poradniaKardiologiczna/poradniaKardiologiczna.jpg" alt="poradniaKardiologiczna" />
                     </div>
                     <h3 id="title">PORADNIA KARDIOLOGICZNA</h3>
                 </section>
